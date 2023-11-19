@@ -2,7 +2,7 @@ ___
 # DELETE THIS INSTRUCTIONS AND ADD AN INTRODUCTION ABOUT YOUR PROJECT
 ___
 
-# eYY-3yp-project-template
+# e19-3yp-automated-warehouse-management-and-monitoring-system
 
 This is a sample repository you can use for your Embedded Systems project. Once you followed these instructions, remove the text and add a brief introduction to here.
 
