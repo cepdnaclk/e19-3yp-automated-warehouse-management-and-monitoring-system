@@ -14,7 +14,7 @@ title: Project Template
 ---
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/19/304, Sajith Priyankara, [email](mailto:e19304@eng.pdn.ac.lk)
 -  eNumber, Name, [email](mailto:name@email.com)
 -  eNumber, Name, [email](mailto:name@email.com)
 
