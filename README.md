@@ -1,6 +1,4 @@
-___
-# DELETE THIS INSTRUCTIONS AND ADD AN INTRODUCTION ABOUT YOUR PROJECT
-___
+
 
 # e19-3yp-automated-warehouse-management-and-monitoring-system
 
