@@ -13,10 +13,13 @@ title: Project Template
 
 ---
 
-## Team
+## Team  
+-  E/19/142, Hashini Illangarathne [email](mailto:e19142@eng.pdn.ac.lk)
+-  E/19/264, Pawani Nishantha [email](mailto:e19264@eng.pdn.ac.lk)
 -  E/19/304, Sajith Priyankara, [email](mailto:e19304@eng.pdn.ac.lk)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/19/363, Nimnadi Senevirathna [email](mailto:e19363@eng.pdn.ac.lk)
+-  E/19/375, Dasun Silva [email](mailto:e19375@eng.pdn.ac.lk)
+
 
 <!-- Image (photo/drawing of the final hardware) should be here -->
 
