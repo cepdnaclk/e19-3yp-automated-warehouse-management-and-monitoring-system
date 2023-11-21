@@ -42,11 +42,11 @@ title:
 ### About
 
 The world of logistics and warehousing has seen a significant transformation with the integration of automation and robotics. In particular, the use of automated pallet jacks has become increasingly vital for efficient material handling within warehouses, distribution centers, and manufacturing facilities. These automated systems streamline operations by reducing manual labor, enhancing productivity, and ensuring safer working environments.<br><br>
-Our project focuses on the design, development, and implementation of an advanced automated pallet jack system. The primary objective is to create a robust, intelligent, and adaptable pallet jack that can autonomously navigate through warehouse environments, pick up, transport, and drop off pallets with precision and efficiency. Incorporating cutting-edge technology and innovative engineering, this project aims to revolutionize material handling processes, contributing to increased operational efficiency and reduced labor costs for businesses.
+Our project focuses on the design, development, and implementation of an advanced automated pallet jack system. The primary objective is to create a robust, intelligent, and adaptable pallet jack that can autonomously navigate through warehouse environments, pick up, transport, and drop off pallets with precision and efficiency. Incorporating cutting-edge technology and innovative engineering, this project aims to revolutionize material handling processes, contributing to increased operational efficiency and reduced labor costs for businesses.<br>
 
 <p align ="center">
      <img src="images/images.jpeg" width=500  />
-</p>
+</p><br>
 
 ### Challenges of current system
 - Without automated pallet jacks, workers have to do more physical work, which can be tiring and take longer.
@@ -61,7 +61,7 @@ Our project focuses on the design, development, and implementation of an advance
 
 - Proper training for manual pallet jack operation requires time and resources, impacting operational timelines.
 
-- Manual operations might have limitations in speed and efficiency, affecting overall productivity and throughput rates.
+- Manual operations might have limitations in speed and efficiency, affecting overall productivity and throughput rates.<br><br>
 
 ### Advantages of our system
 - Automated pallet jacks work faster and more consistently than manual ones, improving the speed of moving goods from one place to another.
@@ -80,7 +80,7 @@ Our project focuses on the design, development, and implementation of an advance
 
 - Automated pallet jacks can work continuously without breaks, enabling operations to continue around the clock.
 
-- While there's an initial investment, automated systems can lead to long-term cost savings by reducing labor expenses and improving operational efficiency.
+- While there's an initial investment, automated systems can lead to long-term cost savings by reducing labor expenses and improving operational efficiency.<br><br>
 
 
   
