@@ -44,6 +44,10 @@ title:
 The world of logistics and warehousing has seen a significant transformation with the integration of automation and robotics. In particular, the use of automated pallet jacks has become increasingly vital for efficient material handling within warehouses, distribution centers, and manufacturing facilities. These automated systems streamline operations by reducing manual labor, enhancing productivity, and ensuring safer working environments.<br><br>
 Our project focuses on the design, development, and implementation of an advanced automated pallet jack system. The primary objective is to create a robust, intelligent, and adaptable pallet jack that can autonomously navigate through warehouse environments, pick up, transport, and drop off pallets with precision and efficiency. Incorporating cutting-edge technology and innovative engineering, this project aims to revolutionize material handling processes, contributing to increased operational efficiency and reduced labor costs for businesses.
 
+<p align ="center">
+     <img src="images/images.jpeg" width=500  />
+</p>
+
 ### Challenges of current system
 - Without automated pallet jacks, workers have to do more physical work, which can be tiring and take longer.
 
