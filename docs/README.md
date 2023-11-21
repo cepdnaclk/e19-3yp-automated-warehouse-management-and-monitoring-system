@@ -5,12 +5,12 @@ permalink: index.html
 # Please update this with your repository name and project title
 repository-name: eYY-3yp-project-template
 Project: Automated Warehouse Management and Monitoring System
-title:  
+title: PalletPro 
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# PalletPro - Automated Warehouse Management and Monitoring System
 
 ---
 
