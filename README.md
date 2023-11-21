@@ -1,55 +1,129 @@
 
 
-# e19-3yp-automated-warehouse-management-and-monitoring-system
+# PalletPro - Automated Warehouse Management and Monitoring System
 
-This is a sample repository you can use for your Embedded Systems project. Once you followed these instructions, remove the text and add a brief introduction to here.
+---
 
-### Enable GitHub Pages
+## Team  
+-  E/19/142, Hashini Illangarathne [email](mailto:e19142@eng.pdn.ac.lk)
+-  E/19/264, Pawani Nishantha [email](mailto:e19264@eng.pdn.ac.lk)
+-  E/19/304, Sajith Priyankara, [email](mailto:e19304@eng.pdn.ac.lk)
+-  E/19/363, Nimnadi Senevirathna [email](mailto:e19363@eng.pdn.ac.lk)
+-  E/19/375, Dasun Silva [email](mailto:e19375@eng.pdn.ac.lk)
 
-You can put the things to be shown in GitHub pages into the _docs/_ folder. Both html and md file formats are supported. You need to go to settings and enable GitHub pages and select _main_ branch and _docs_ folder from the dropdowns, as shown in the below image.
 
-![image](https://user-images.githubusercontent.com/11540782/98789936-028d3600-2429-11eb-84be-aaba665fdc75.png)
+<!-- Image (photo/drawing of the final hardware) should be here -->
 
-### Special Configurations
+<!-- This is a sample image, to show how to add images to your page. To learn more options, please refer [this](https://projects.ce.pdn.ac.lk/docs/faq/how-to-add-an-image/) -->
 
-These projects will be automatically added into [https://projects.ce.pdn.ac.lk](). If you like to show more details about your project on this site, you can fill the parameters in the file, _/docs/index.json_
+<!-- ![Sample Image](./images/sample.png) -->
 
-```
-{
-  "title": "This is the title of the project",
-  "team": [
-    {
-      "name": "Team Member Name 1",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
-    },
-    {
-      "name": "Team Member Name 2",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
-    },
-    {
-      "name": "Team Member Name 3",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
-    }
-  ],
-  "supervisors": [
-    {
-      "name": "Dr. Supervisor 1",
-      "email": "email@eng.pdn.ac.lk"
-    },
-    {
-      "name": "Supervisor 2",
-      "email": "email@eng.pdn.ac.lk"
-    }
-  ],
-  "tags": ["Web", "Embedded Systems"]
-}
-```
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Solution Architecture](#solution-architecture )
+3. [Hardware & Software Designs](#hardware-and-software-designs)
+4. [Testing](#testing)
+5. [Detailed budget](#detailed-budget)
+6. [Conclusion](#conclusion)
+7. [Links](#links)
 
-Once you filled this _index.json_ file, please verify the syntax is correct. (You can use [this](https://jsonlint.com/) tool).
+## Introduction
 
-### Page Theme
+### About
 
-A custom theme integrated with this GitHub Page, which is based on [github.com/cepdnaclk/eYY-project-theme](https://github.com/cepdnaclk/eYY-project-theme). If you like to remove this default theme, you can remove the file, _docs/\_config.yml_ and use HTML based website.
+The world of logistics and warehousing has seen a significant transformation with the integration of automation and robotics. In particular, the use of automated pallet jacks has become increasingly vital for efficient material handling within warehouses, distribution centers, and manufacturing facilities. These automated systems streamline operations by reducing manual labor, enhancing productivity, and ensuring safer working environments.<br><br>
+Our project focuses on the design, development, and implementation of an advanced automated pallet jack system. The primary objective is to create a robust, intelligent, and adaptable pallet jack that can autonomously navigate through warehouse environments, pick up, transport, and drop off pallets with precision and efficiency. Incorporating cutting-edge technology and innovative engineering, this project aims to revolutionize material handling processes, contributing to increased operational efficiency and reduced labor costs for businesses.<br>
+
+<p align ="center">
+     <img src="images/WhatsApp%20Image%202023-11-21%20at%2020.04.12_2ad850f6.jpg" width=500  />
+</p><br>
+
+### Challenges of current system
+- Without automated pallet jacks, workers have to do more physical work, which can be tiring and take longer.
+
+- Workers might spend time on simple tasks instead of doing more important jobs that need thinking.
+
+- If a warehouse gets busier, it's harder to handle more goods without hiring lots more people.
+
+- When people move things manually, there might be mistakes or things might not be done the same way each time.
+
+- Moving heavy things can be risky for workers. Even with safety rules, accidents might still happen.
+
+- Proper training for manual pallet jack operation requires time and resources, impacting operational timelines.
+
+- Manual operations might have limitations in speed and efficiency, affecting overall productivity and throughput rates.<br><br>
+
+### Advantages of our system
+- Automated pallet jacks work faster and more consistently than manual ones, improving the speed of moving goods from one place to another.
+
+- They decrease the need for human workers to physically move items, freeing up labor for more complex or critical tasks.
+
+- Automated systems are more precise in handling goods, reducing errors and ensuring items are placed or moved accurately.
+
+- They minimize the risk of workplace injuries by reducing manual lifting and handling of heavy items.
+
+- Automated pallet jacks can handle a higher volume of goods in a shorter time, improving overall warehouse productivity.
+
+- Many automated systems can adapt to changes in the warehouse environment or workload, providing flexibility in operations.
+
+- They can be integrated with other systems, such as inventory management or tracking, streamlining warehouse processes and enhancing accuracy.
+
+- Automated pallet jacks can work continuously without breaks, enabling operations to continue around the clock.
+
+- While there's an initial investment, automated systems can lead to long-term cost savings by reducing labor expenses and improving operational efficiency.<br><br>
+
+
+  
+## Solution Architecture
+### High level diagram 
+<p align ="center">
+     <img src="images/Capture1.PNG" width=1000  />
+</p><br>
+
+The high-level solution architecture for the automated pallet jack comprises three key components.
+
+Ultrasonic Sensors:
+- Purpose: Enable obstacle avoidance and mapping.
+- Functionality: Emit ultrasonic waves to detect obstacles and map the environment for safe and efficient navigation.
+  
+Weight Sensors:
+- Purpose: Accurately measure the weight loaded onto the pallet jack.
+- Functionality: Continuously monitor load weight in real-time, ensuring optimal capacity for safe and efficient material transportation.
+  
+WiFi Module:
+- Purpose: Facilitate precise location tracking.
+- Functionality: Scan WiFi beacons and measure signal strength to determine the pallet jack's location, enhancing navigation accuracy.<br><br>
+
+## Hardware and Software Designs
+### Hardware Design
+<p align ="center">
+     <img src="images/Capture2.PNG" width=1000  />
+</p><br>
+
+
+
+## Testing
+
+Testing done on hardware and software, detailed + summarized results
+
+## Detailed budget
+
+All items and costs
+
+| Item          | Quantity  | Unit Cost  | Total  |
+| ------------- |:---------:|:----------:|-------:|
+| Sample item   | 5         | 10 LKR     | 50 LKR |
+
+## Conclusion
+
+What was achieved, future developments, commercialization plans
+
+## Links
+
+- [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
+- [Project Page](https://cepdnaclk.github.io/{{ page.repository-name}}){:target="_blank"}
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
+- [University of Peradeniya](https://eng.pdn.ac.lk/)
+
+[//]: # (Please refer this to learn more about Markdown syntax)
+[//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
