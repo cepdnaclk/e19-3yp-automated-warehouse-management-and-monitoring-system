@@ -112,7 +112,11 @@ All items and costs
 
 | Item          | Quantity  | Unit Cost  | Total  |
 | ------------- |:---------:|:----------:|-------:|
-| Sample item   | 5         | 10 LKR     | 50 LKR |
+| ESP32 - Wifi Module   | 1         | 1500 LKR     | 1500 LKR |
+| ESP8266 - Wifi Module   | 6         | 700 LKR     | 4200 LKR |
+| L298N Motor Driver   | 2         | 430 LKR     | 860 LKR |
+| HC-SR04 Ultrasonic Sensor   | 2        | 250 LKR     | 500 LKR |
+| Strin Gauge   | 1         | 400 LKR     | 400 LKR |
 
 ## Conclusion
 
