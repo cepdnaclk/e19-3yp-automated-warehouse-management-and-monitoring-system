@@ -105,8 +105,12 @@ WiFi Module:
 - Functionality: Scan WiFi beacons and measure signal strength to determine the pallet jack's location, enhancing navigation accuracy.<br><br>
 
 ## Hardware and Software Designs
+### Hardware Design
+<p align ="center">
+     <img src="images/Capture2.PNG" width=1000  />
+</p><br>
 
-Detailed designs with many sub-sections
+
 
 ## Testing
 
