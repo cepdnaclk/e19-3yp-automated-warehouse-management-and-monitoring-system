@@ -87,7 +87,7 @@ Our project focuses on the design, development, and implementation of an advance
 ## Solution Architecture
 ### High level diagram 
 <p align ="center">
-     <img src="" width=500  />
+     <img src="images/Capture1.PNG" width=1000  />
 </p><br>
 
 The high-level solution architecture for the automated pallet jack comprises three key components.
