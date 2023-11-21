@@ -85,8 +85,24 @@ Our project focuses on the design, development, and implementation of an advance
 
   
 ## Solution Architecture
+### High level diagram 
+<p align ="center">
+     <img src="" width=500  />
+</p><br>
 
-High level diagram + description
+The high-level solution architecture for the automated pallet jack comprises three key components.
+
+Ultrasonic Sensors:
+- Purpose: Enable obstacle avoidance and mapping.
+- Functionality: Emit ultrasonic waves to detect obstacles and map the environment for safe and efficient navigation.
+  
+Weight Sensors:
+- Purpose: Accurately measure the weight loaded onto the pallet jack.
+- Functionality: Continuously monitor load weight in real-time, ensuring optimal capacity for safe and efficient material transportation.
+  
+WiFi Module:
+- Purpose: Facilitate precise location tracking.
+- Functionality: Scan WiFi beacons and measure signal strength to determine the pallet jack's location, enhancing navigation accuracy.<br><br>
 
 ## Hardware and Software Designs
 
