@@ -35,7 +35,7 @@ The world of logistics and warehousing has seen a significant transformation wit
 Our project focuses on the design, development, and implementation of an advanced automated pallet jack system. The primary objective is to create a robust, intelligent, and adaptable pallet jack that can autonomously navigate through warehouse environments, pick up, transport, and drop off pallets with precision and efficiency. Incorporating cutting-edge technology and innovative engineering, this project aims to revolutionize material handling processes, contributing to increased operational efficiency and reduced labor costs for businesses.<br>
 
 <p align ="center">
-     <img src="docs/images/WhatsApp%20Image%202023-11-21%20at%2020.04.12_2ad850f6.jpg" width=500  />
+     <img src="docs/images/capture0.png" width=500  />
 </p><br>
 
 ### Challenges of current system
@@ -116,6 +116,10 @@ Testing done on hardware and software, detailed + summarized results
 | L298N Motor Driver   | 2         | 430 LKR     | 860 LKR |
 | HC-SR04 Ultrasonic Sensor   | 2        | 250 LKR     | 500 LKR |
 | Strin Gauge   | 1         | 400 LKR     | 400 LKR |
+| Motors   | 2         | 4000 LKR     | 8000 LKR |
+| Wheels   | 4         | 1500 LKR     | 6000 LKR |
+| KY003 Hall Effect Sensors   | 3         | 170 LKR     | 510 LKR |
+| Other Non-Electronic Material   | 1         | 5000 LKR     | 5000 LKR |
 
 ## Conclusion
 
