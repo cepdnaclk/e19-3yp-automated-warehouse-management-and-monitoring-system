@@ -77,7 +77,7 @@ Our project focuses on the design, development, and implementation of an advance
 ## Solution Architecture
 ### High level diagram 
 <p align ="center">
-     <img src="docs/images/9.PNG" width=1000  />
+     <img src="docs/images/9.png" width=1000  />
 </p><br>
 
 The high-level solution architecture for the automated pallet jack comprises three key components.
@@ -97,7 +97,7 @@ WiFi Module:
 ## Hardware and Software Designs
 ### Hardware Design
 <p align ="center">
-     <img src="docs/images/11.PNG" width=1000  />
+     <img src="docs/images/11.png" width=1000  />
 </p><br>
 
 
