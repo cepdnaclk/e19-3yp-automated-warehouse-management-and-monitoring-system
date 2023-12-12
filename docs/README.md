@@ -48,7 +48,7 @@ Our project focuses on the design, development, and implementation of an advance
 
 <p align ="center">
      <video width="800" height="450" controls>
-       <source src="../docs/video/intro.mp4" type="video/mp4">
+       <source src="../docs/video/Intro.mp4" type="video/mp4">
 </video>
 </p><br>
 
