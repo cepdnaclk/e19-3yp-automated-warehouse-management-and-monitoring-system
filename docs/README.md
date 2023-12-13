@@ -47,9 +47,11 @@ The world of logistics and warehousing has seen a significant transformation wit
 Our project focuses on the design, development, and implementation of an advanced automated pallet jack system. The primary objective is to create a robust, intelligent, and adaptable pallet jack that can autonomously navigate through warehouse environments, pick up, transport, and drop off pallets with precision and efficiency. Incorporating cutting-edge technology and innovative engineering, this project aims to revolutionize material handling processes, contributing to increased operational efficiency and reduced labor costs for businesses.<br>
 
 <p align ="center">
-<video width="800" height="450" controls>
-  <source src="/video/Intro.mp4" type="video/mp4">
-</video>
+
+
+https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitoring-system/assets/115541700/dd2e6886-6607-43b6-a39d-fb8224b15fe3
+
+
 </p><br>
 
 ### Challenges of current system
@@ -91,7 +93,7 @@ Our project focuses on the design, development, and implementation of an advance
 ## Solution Architecture
 ### High level diagram 
 <p align ="center">
-     <img src="/images/9.png" width=1000  />
+     ![Capture1](https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitoring-system/assets/115541700/b5db2601-4038-46c2-ae86-30d9637026b5)
 </p><br>
 
 The high-level solution architecture for the automated pallet jack comprises three key components.
@@ -111,7 +113,7 @@ WiFi Module:
 ## Hardware and Software Designs
 ### Hardware Design
 <p align ="center">
-     <img src="]/images/11.png" width=1000  />
+     ![Capture2](https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitoring-system/assets/115541700/72ecb899-6e0d-44af-89fb-495f9a60efbe)
 </p><br>
 
 
