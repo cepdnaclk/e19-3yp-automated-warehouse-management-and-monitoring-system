@@ -106,7 +106,7 @@ https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitori
 ## Solution Architecture
 ### High level diagram 
 <p align ="center">
-    <img src="asserts/images/11.png" width=1000  />
+    <img src="asserts/images/9.png" width=1000  />
 </p><br>
 
 The high-level solution architecture for the automated pallet jack comprises three key components.
@@ -126,7 +126,7 @@ WiFi Module:
 ## Hardware and Software Designs
 ### Hardware Design
 <p align ="center">
-     <img src="asserts/images/9.png" width=1000  />
+     <img src="asserts/images/11.png" width=1000  />
 </p><br>
 
 
