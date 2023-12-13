@@ -51,6 +51,8 @@ Our project focuses on the design, development, and implementation of an advance
 
 https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitoring-system/assets/115541700/dd2e6886-6607-43b6-a39d-fb8224b15fe3
 
+<video src="[https://user-images.githubusercontent.com/169707/126715420-991ad821-9ac8-4b66-b79e-e0966e0f3a89.mp4](https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitoring-system/blob/main/docs/video/Intro.mp4)" controls="controls" style="max-width: 730px;">
+</video>
 
 </p><br>
 
