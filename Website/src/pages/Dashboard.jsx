@@ -67,12 +67,14 @@ export default function Dashboard() {
           <Stack direction='row' spacing={4}>
           <button
   style={{
+    display: 'flex', // Add this line to make the button a flex container
+    alignItems: 'center', // Add this line to vertically align the icon and text
     color: '#68EDFF',
     backgroundColor: 'transparent',
     border: '2px solid #68EDFF',
-    borderRadius: '10px',
-    padding: '10px 40px',
-    fontSize: '2rem',
+    borderRadius: '20px',
+    padding: '5px 20px', // Decrease padding for smaller button
+    fontSize: '1.5rem', // Decrease font size for smaller text
     cursor: 'pointer',
   }}
   onClick={() => setIsSignUpModalOpen(true)}
@@ -153,12 +155,14 @@ export default function Dashboard() {
 
 <button
   style={{
+    display: 'flex', // Add this line to make the button a flex container
+    alignItems: 'center', // Add this line to vertically align the icon and text
     color: '#68EDFF',
     backgroundColor: 'transparent',
     border: '2px solid #68EDFF',
-    borderRadius: '10px',
-    padding: '10px 40px',
-    fontSize: '2rem',
+    borderRadius: '20px',
+    padding: '5px 20px', // Decrease padding for smaller button
+    fontSize: '1.5rem', // Decrease font size for smaller text
     cursor: 'pointer',
     transition: '0.3s'
   }}
