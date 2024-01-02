@@ -1,8 +1,10 @@
 import logo from '/img/PALLETPRO.png';
 import { Flex } from '@chakra-ui/react';
 import { Grid, GridItem, Text, Image, Stack } from '@chakra-ui/react';
-import { Button } from '@chakra-ui/react';
+import { Button, ButtonGroup } from '@chakra-ui/react';
+import { color } from 'framer-motion';
 import { FaSignInAlt, FaUserPlus } from 'react-icons/fa';
+
 
 export default function Dashboard() {
   return (
@@ -20,35 +22,48 @@ export default function Dashboard() {
       </GridItem>
       <GridItem bg='#140d07' area={'nav'} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
         <Flex direction="column" justifyContent="center" alignItems="center" alignSelf="center" mb={4}>
-          <Text fontSize="xl" mb='auto' color="white">Nav</Text>
-          <Stack direction='row' spacing={4}>
-            <Button
-              leftIcon={<FaUserPlus />}
-              colorScheme="teal"
-              variant='outline'
-              p={4}
-              fontSize="lg"
-              borderRadius="md"
-              _hover={{ bg: "teal.500", borderColor: "teal.500", boxShadow: "lg" }}
-              _active={{ bg: "teal.700", borderColor: "teal.700", boxShadow: "md" }}
-              _focus={{ boxShadow: "outline" }}
-            >
-              Sign-Up
-            </Button>
+        <Text fontSize="xl" mb='auto' color="white" textAlign='center'>
+        <h1 style={{ fontSize: '5rem', marginBottom: '20px' }}>
+    WELCOME TO <span style={{ color: 'white' }}>PALLET</span><span style={{ color: '#68EDFF' }}>PRO</span>
+  </h1>
+</Text>
 
-            <Button
-              leftIcon={<FaSignInAlt />}
-              colorScheme='teal'
-              variant='outline'
-              p={4}
-              fontSize="lg"
-              borderRadius="md"
-              _hover={{ bg: "teal.500", borderColor: "teal.500", boxShadow: "lg" }}
-              _active={{ bg: "teal.700", borderColor: "teal.700", boxShadow: "md" }}
-              _focus={{ boxShadow: "outline" }}
-            >
-              Login
-            </Button>
+          <Stack direction='row' spacing={4}>
+          <button
+  style={{
+    color: '#68EDFF',
+    backgroundColor: 'transparent',
+    border: '2px solid #68EDFF',
+    borderRadius: '10px',
+    padding: '15px 20px',
+    fontSize: '2rem',
+    cursor: 'pointer',
+  }}
+  onMouseEnter={(e) => e.target.style.color = 'white'}
+  onMouseLeave={(e) => e.target.style.color = '#68EDFF'}
+>
+  <FaUserPlus style={{ marginRight: '5px' }} />
+  Sign-Up
+</button>
+
+<button
+  style={{
+    color: '#68EDFF',
+    backgroundColor: 'transparent',
+    border: '2px solid #68EDFF',
+    borderRadius: '10px',
+    padding: '15px 20px',
+    fontSize: '2rem',
+    cursor: 'pointer',
+    transition: '0.3s'
+  }}
+  onMouseEnter={(e) => e.target.style.color = 'white'}
+  onMouseLeave={(e) => e.target.style.color = '#68EDFF'}
+>
+  <FaSignInAlt style={{ marginRight: '5px' }} />
+  Login
+</button>
+
           </Stack>
         </Flex>
       </GridItem>
