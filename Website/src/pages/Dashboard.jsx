@@ -4,9 +4,28 @@ import { Grid, GridItem, Text, Image, Stack } from '@chakra-ui/react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
 import { color } from 'framer-motion';
 import { FaSignInAlt, FaUserPlus } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { Input } from '@chakra-ui/react';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
 
 
 export default function Dashboard() {
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [ssid, setSSID] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   return (
     <Grid
       templateAreas={`"header header"
@@ -37,16 +56,85 @@ export default function Dashboard() {
     backgroundColor: 'transparent',
     border: '2px solid #68EDFF',
     borderRadius: '10px',
-    padding: '15px 20px',
+    padding: '10px 40px',
     fontSize: '2rem',
     cursor: 'pointer',
   }}
+  onClick={() => setIsSignUpModalOpen(true)}
   onMouseEnter={(e) => e.target.style.color = 'white'}
   onMouseLeave={(e) => e.target.style.color = '#68EDFF'}
 >
   <FaUserPlus style={{ marginRight: '5px' }} />
   Sign-Up
 </button>
+<Modal isOpen={isSignUpModalOpen} onClose={() => setIsSignUpModalOpen(false)} size="sm" motionPreset="slideInBottom">
+        <ModalOverlay />
+        <ModalContent
+          bg="white"
+          color="black"
+          borderRadius="8px"
+          boxShadow="lg"
+          maxW="400px"
+          mx="auto"
+          my="auto"
+        >
+          <ModalHeader
+            bg="teal.500"
+            color="white"
+            p={4}
+            fontSize="2xl"
+            borderTopLeftRadius="8px"
+            borderTopRightRadius="8px"
+          >
+            Sign-Up
+          </ModalHeader>
+          <ModalCloseButton color="black" />
+          <ModalBody p={4}>
+            <Input
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              mb={4}
+              variant="filled"
+              borderColor="teal.200"
+            />
+            <Input
+              placeholder="SSID"
+              value={ssid}
+              onChange={(e) => setSSID(e.target.value)}
+              mb={4}
+              variant="filled"
+              borderColor="teal.200"
+            />
+            <Input
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              mb={4}
+              variant="filled"
+              borderColor="teal.200"
+            />
+            <Input
+              placeholder="Phone Number"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              mb={4}
+              variant="filled"
+              borderColor="teal.200"
+            />
+            <Button
+              colorScheme="teal"
+              size="lg"
+              onClick={() => {
+                
+                setIsSignUpModalOpen(false);
+              }}
+            >
+              Sign-Up
+            </Button>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
 
 <button
   style={{
@@ -54,17 +142,73 @@ export default function Dashboard() {
     backgroundColor: 'transparent',
     border: '2px solid #68EDFF',
     borderRadius: '10px',
-    padding: '15px 20px',
+    padding: '10px 40px',
     fontSize: '2rem',
     cursor: 'pointer',
     transition: '0.3s'
   }}
+  onClick={() => setIsLoginModalOpen(true)}
   onMouseEnter={(e) => e.target.style.color = 'white'}
   onMouseLeave={(e) => e.target.style.color = '#68EDFF'}
 >
   <FaSignInAlt style={{ marginRight: '5px' }} />
   Login
 </button>
+<Modal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} size="sm" motionPreset="slideInBottom">
+  <ModalOverlay />
+  <ModalContent
+    bg="white"
+    color="black"
+    borderRadius="8px"
+    boxShadow="lg"
+    maxW="400px"
+    mx="auto"
+    my="auto"
+  >
+    <ModalHeader
+      bg="teal.500"
+      color="white"
+      p={4}
+      fontSize="2xl"
+      borderTopLeftRadius="8px"
+      borderTopRightRadius="8px"
+    >
+      Login
+    </ModalHeader>
+    <ModalCloseButton color="black" />
+    <ModalBody p={4}>
+      <Input
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        mb={4}
+        variant="filled"
+        borderColor="teal.200"
+      />
+      <Input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        mb={4}
+        variant="filled"
+        borderColor="teal.200"
+      />
+      <Button
+        colorScheme="teal"
+        size="lg"
+        onClick={() => {
+         
+          setIsLoginModalOpen(false);
+        }}
+      >
+        Login
+      </Button>
+    </ModalBody>
+  </ModalContent>
+</Modal>
+
+
 
           </Stack>
         </Flex>
@@ -75,5 +219,6 @@ export default function Dashboard() {
         </Flex>
       </GridItem>
     </Grid>
+    
   )
 }

@@ -4,6 +4,7 @@ import {
   Route, 
   RouterProvider 
 } from 'react-router-dom'
+import { ChakraProvider } from '@chakra-ui/react';
 
 // layouts and pages
 import RootLayout from './layouts/RootLayout'
@@ -24,7 +25,9 @@ const router = createBrowserRouter(
 
 function App() {
   return (
+    <ChakraProvider>
     <RouterProvider router={router} />
+    </ChakraProvider>
   )
 }
 
