@@ -37,11 +37,26 @@ export default function Dashboard() {
       fontWeight='bold'
     >
       <GridItem bg='#140d07' area={'header'} display="flex" justifyContent="flex-end" alignItems="center">
-        <a href="#about-us" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5rem', marginLeft: '20px' }}>ABOUT US</a>
-        <a href="#contact" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5rem', marginLeft: '20px' }}>CONTACT</a>
-        <a href="#services" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5rem', marginLeft: '20px' }}>SERVICES</a>
+        <a href="#about-us" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s' }}
+          onMouseEnter={(e) => e.target.style.color = '#68EDFF'}
+          onMouseLeave={(e) => e.target.style.color = 'white'}
+        >
+          About Us
+        </a>
+        <a href="#contact" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s' }}
+          onMouseEnter={(e) => e.target.style.color = '#68EDFF'}
+          onMouseLeave={(e) => e.target.style.color = 'white'}
+        >
+          Contact
+        </a>
+        <a href="#services" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s', marginRight:'100px' }}
+          onMouseEnter={(e) => e.target.style.color = '#68EDFF'}
+          onMouseLeave={(e) => e.target.style.color = 'white'}
+        >
+          Services
+        </a>
       </GridItem>
-      <GridItem bg='#140d07' area={'nav'} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <GridItem bg='#140d07' area={'nav'} display="flex" flexDirection="column" justifyContent="center" alignItems="center" height='100%'>
         <Flex direction="column" justifyContent="center" alignItems="center" alignSelf="center" mb={4}>
         <Text fontSize="xl" mb='auto' color="white" textAlign='center'>
         <h1 style={{ fontSize: '5rem', marginBottom: '20px' }}>
