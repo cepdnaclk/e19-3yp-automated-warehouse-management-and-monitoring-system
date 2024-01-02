@@ -17,8 +17,10 @@ export default function Dashboard() {
       color='blackAlpha.700'
       fontWeight='bold'
     >
-      <GridItem bg='#140d07' area={'header'}>
-        Header
+      <GridItem bg='#140d07' area={'header'} display="flex" justifyContent="flex-end" alignItems="center">
+        <a href="#about-us" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5rem', marginLeft: '20px' }}>ABOUT US</a>
+        <a href="#contact" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5rem', marginLeft: '20px' }}>CONTACT</a>
+        <a href="#services" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5rem', marginLeft: '20px' }}>SERVICES</a>
       </GridItem>
       <GridItem bg='#140d07' area={'nav'} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
         <Flex direction="column" justifyContent="center" alignItems="center" alignSelf="center" mb={4}>
