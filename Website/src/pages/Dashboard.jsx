@@ -1,4 +1,4 @@
-import logo from '/img/PALLETPRO.png';
+import logo from '/img/PALLETPRO1.png';
 import { Flex } from '@chakra-ui/react';
 import { Grid, GridItem, Text, Image, Stack } from '@chakra-ui/react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
@@ -30,7 +30,7 @@ export default function Dashboard() {
     <Grid
       templateAreas={`"header header"
                       "nav main"`}
-      gridTemplateRows={'50px 1fr 30px'}
+      gridTemplateRows={'50px 1fr'}
       gridTemplateColumns={'1fr 1fr'}
       h='100vh'
       color='blackAlpha.700'
@@ -67,14 +67,14 @@ export default function Dashboard() {
           <Stack direction='row' spacing={4}>
           <button
   style={{
-    display: 'flex', // Add this line to make the button a flex container
-    alignItems: 'center', // Add this line to vertically align the icon and text
+    display: 'flex', 
+    alignItems: 'center', 
     color: '#68EDFF',
     backgroundColor: 'transparent',
     border: '2px solid #68EDFF',
     borderRadius: '20px',
-    padding: '5px 20px', // Decrease padding for smaller button
-    fontSize: '1.5rem', // Decrease font size for smaller text
+    padding: '5px 20px', 
+    fontSize: '1.5rem', 
     cursor: 'pointer',
   }}
   onClick={() => setIsSignUpModalOpen(true)}
@@ -82,7 +82,7 @@ export default function Dashboard() {
   onMouseLeave={(e) => e.target.style.color = '#68EDFF'}
 >
   <FaUserPlus style={{ marginRight: '5px' }} />
-  Sign-Up
+  Sign Up
 </button>
 <Modal isOpen={isSignUpModalOpen} onClose={() => setIsSignUpModalOpen(false)} size="sm" motionPreset="slideInBottom">
         <ModalOverlay />
@@ -103,7 +103,7 @@ export default function Dashboard() {
             borderTopLeftRadius="8px"
             borderTopRightRadius="8px"
           >
-            Sign-Up
+            Sign Up
           </ModalHeader>
           <ModalCloseButton color="black" />
           <ModalBody p={4}>
@@ -139,6 +139,7 @@ export default function Dashboard() {
               variant="filled"
               borderColor="teal.200"
             />
+            <Flex justifyContent="center" alignItems="center">
             <Button
               colorScheme="teal"
               size="lg"
@@ -147,22 +148,23 @@ export default function Dashboard() {
                 setIsSignUpModalOpen(false);
               }}
             >
-              Sign-Up
+              Sign Up
             </Button>
+            </Flex>
           </ModalBody>
         </ModalContent>
       </Modal>
 
 <button
   style={{
-    display: 'flex', // Add this line to make the button a flex container
-    alignItems: 'center', // Add this line to vertically align the icon and text
+    display: 'flex',
+    alignItems: 'center', 
     color: '#68EDFF',
     backgroundColor: 'transparent',
     border: '2px solid #68EDFF',
     borderRadius: '20px',
-    padding: '5px 20px', // Decrease padding for smaller button
-    fontSize: '1.5rem', // Decrease font size for smaller text
+    padding: '5px 20px', 
+    fontSize: '1.5rem', 
     cursor: 'pointer',
     transition: '0.3s'
   }}
@@ -213,7 +215,9 @@ export default function Dashboard() {
         variant="filled"
         borderColor="teal.200"
       />
+      <Flex justifyContent="center" alignItems="center">
       <Button
+        
         colorScheme="teal"
         size="lg"
         onClick={() => {
@@ -222,7 +226,9 @@ export default function Dashboard() {
         }}
       >
         Login
+      
       </Button>
+      </Flex>
     </ModalBody>
   </ModalContent>
 </Modal>
