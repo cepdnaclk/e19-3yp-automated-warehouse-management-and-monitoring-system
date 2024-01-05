@@ -15,6 +15,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react'
+import { Link } from 'react-router-dom';
 
 
 export default function Dashboard() {
@@ -37,19 +38,19 @@ export default function Dashboard() {
       fontWeight='bold'
     >
       <GridItem bg='#140d07' area={'header'} display="flex" justifyContent="flex-end" alignItems="center">
-        <a href="#about-us" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s' }}
-          onMouseEnter={(e) => e.target.style.color = '#68EDFF'}
-          onMouseLeave={(e) => e.target.style.color = 'white'}
-        >
-          About Us
-        </a>
-        <a href="#contact" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s' }}
-          onMouseEnter={(e) => e.target.style.color = '#68EDFF'}
-          onMouseLeave={(e) => e.target.style.color = 'white'}
-        >
-          Contact
-        </a>
-        <a href="#services" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s', marginRight:'100px' }}
+      <Link to="/admin" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s' }}
+    onMouseEnter={(e) => e.target.style.color = '#68EDFF'}
+    onMouseLeave={(e) => e.target.style.color = 'white'}
+  >
+    About Us
+  </Link>
+  <Link to="/user" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s' }}
+    onMouseEnter={(e) => e.target.style.color = '#68EDFF'}
+    onMouseLeave={(e) => e.target.style.color = 'white'}
+  >
+    Contact
+  </Link>
+        <a href="#services" style={{ color: 'white', textDecoration: 'none', fontSize: '1rem', marginLeft: '30px', transition: 'color 0.3s', marginRight:'175px' }}
           onMouseEnter={(e) => e.target.style.color = '#68EDFF'}
           onMouseLeave={(e) => e.target.style.color = 'white'}
         >
