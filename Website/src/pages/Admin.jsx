@@ -3,6 +3,8 @@ import { Image } from '@chakra-ui/react'
 import logo from '/img/LOGO.png'
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
+import {useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, FormControl, FormLabel, Input, NumberInput, NumberInputField } from "@chakra-ui/react";
 import { useState } from "react";
@@ -21,8 +23,23 @@ import { AiOutlineUser } from 'react-icons/ai';
 
 
 export default function Admin() {
-  const [isOpen, setIsOpen] = useState(false);
-  const onClose = () => setIsOpen(false);
+  const [employees, setEmployees] = useState([]);
+  const [selectedEmployee, setSelectedEmployee] = useState(null);
+  const [isEmployeesOpen, setIsEmployeesOpen] = useState(false);
+  const [isCreateMapOpen, setIsCreateMapOpen] = useState(false);
+  const onCloseEmployees = () => setIsEmployeesOpen(false);
+  const onCloseCreateMap = () => setIsCreateMapOpen(false);
+  const onOpenEmployees = () => setIsEmployeesOpen(true);
+  const onOpenCreateMap = () => setIsCreateMapOpen(true);
+  useEffect(() => {
+    axios.get('https://your-aws-server.com/api/employees') // Replace with your actual API endpoint
+      .then(response => {
+        setEmployees(response.data);
+      })
+      .catch(error => {
+        console.error('There was an error!', error);
+      });
+  }, []);
   return (
     <Grid
   templateAreas={`"header header"
@@ -39,9 +56,35 @@ export default function Admin() {
   <Image src={logo} alt="Logo" boxSize="60px" marginTop="-0.2rem"/>
 </Link>
   <Spacer />
-    <Button colorScheme="teal" mr="2">
+  <Button colorScheme="teal" mr="2"  onClick={onOpenEmployees}>
       Employees
     </Button>
+    <Modal isOpen={isEmployeesOpen} onClose={onCloseEmployees}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Employees</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            {employees.map(employee => (
+              <p key={employee.id} onClick={() => { setSelectedEmployee(employee); onClose(); }}>
+                {employee.name}
+              </p>
+            ))}
+             </ModalBody>
+          <ModalFooter>
+          <Button colorScheme="teal" mr={3} onClick={onCloseEmployees}>
+ OK
+</Button>
+<Button variant="ghost" onClick={onCloseEmployees}>Cancel</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+      {selectedEmployee && (
+        <div>
+          <h2>{selectedEmployee.name}</h2>
+          {/* Display other details of the selected employee */}
+        </div>
+      )}
     <Button colorScheme="teal">
       Pallet Jacks
     </Button>
@@ -54,9 +97,9 @@ export default function Admin() {
   <MenuButton as={Avatar} rightIcon={<ChevronDownIcon />} marginLeft="1rem" marginRight="1rem" >
   </MenuButton>
   <MenuList>
-  <MenuItem onClick={() => setIsOpen(true)}>Create Map</MenuItem>
+  <MenuItem onClick={onOpenCreateMap}>Create Map</MenuItem>
 
-<Modal isOpen={isOpen} onClose={onClose}>
+  <Modal isOpen={isCreateMapOpen} onClose={onCloseCreateMap}>
   <ModalOverlay />
   <ModalContent
   bg="white"
@@ -78,7 +121,7 @@ export default function Admin() {
     <ModalCloseButton />
     <ModalBody>
       <FormControl>
-        <FormLabel>Height</FormLabel>
+        <FormLabel>Length</FormLabel>
         <NumberInput min={0}>
           <NumberInputField />
         </NumberInput>
@@ -99,10 +142,10 @@ export default function Admin() {
     </ModalBody>
 
     <ModalFooter>
-      <Button colorScheme="teal" mr={3} onClick={onClose}>
-        Save
-      </Button>
-      <Button variant="ghost" onClick={onClose}>Cancel</Button>
+    <Button colorScheme="teal" mr={3} onClick={onCloseCreateMap}>
+  Save
+</Button>
+<Button variant="ghost" onClick={onCloseCreateMap}>Cancel</Button>
     </ModalFooter>
   </ModalContent>
 </Modal>
@@ -112,9 +155,9 @@ export default function Admin() {
   </Flex>
 
   </GridItem>
-  <GridItem  bg="#140d07" area={'nav'}>
-    Nav
-  </GridItem>
+  <GridItem bg='#140d07' area={'nav'}>
+  Nav
+</GridItem>
   <GridItem  bg='#140d07' area={'main'}>
     Main
   </GridItem>
