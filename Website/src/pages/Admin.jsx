@@ -41,7 +41,7 @@ export default function Admin() {
       });
   }, []);
   return (
-    <Grid
+  <Grid
   templateAreas={`"header header"
                   "nav main"`}
   gridTemplateRows={'50px 1fr'}
