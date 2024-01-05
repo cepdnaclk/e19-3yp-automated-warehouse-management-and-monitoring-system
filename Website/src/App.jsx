@@ -15,7 +15,8 @@ import Admin from './pages/Admin'
 // router and routes
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+      <Route path="/" element={<RootLayout />}>
+      <Route path="dashboard" element={<Dashboard />} />
       <Route index element={<Dashboard />} />
       <Route path="user" element={<User />} />
       <Route path="admin" element={<Admin />} />
