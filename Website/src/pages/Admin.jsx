@@ -1,4 +1,4 @@
-import { Grid, GridItem, Button, Flex, Spacer } from '@chakra-ui/react'
+import { Grid, GridItem, Button, Flex, Spacer,Select } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import logo from '/img/LOGO.png'
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
@@ -31,6 +31,7 @@ export default function Admin() {
   const onCloseCreateMap = () => setIsCreateMapOpen(false);
   const onOpenEmployees = () => setIsEmployeesOpen(true);
   const onOpenCreateMap = () => setIsCreateMapOpen(true);
+  const [selectedItem, setSelectedItem] = useState("");
   useEffect(() => {
     axios.get('https://your-aws-server.com/api/employees') // Replace with your actual API endpoint
       .then(response => {
@@ -158,9 +159,16 @@ export default function Admin() {
   <GridItem bg='#140d07' area={'nav'}>
   Nav
 </GridItem>
-  <GridItem  bg='#140d07' area={'main'}>
-    Main
-  </GridItem>
+<GridItem bg='#140d07' area={'main'}>
+  <Select placeholder="Select option" onChange={(e) => setSelectedItem(e.target.value)} paddingTop="3rem">
+    {employees.map((employee) => (
+      <option key={employee.id} value={employee.name}>
+        {employee.name}
+      </option>
+    ))}
+  </Select>
+  {selectedItem && <div>Selected Item: {selectedItem}</div>}
+</GridItem>
 </Grid>
   )
 }

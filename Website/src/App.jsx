@@ -5,6 +5,7 @@ import {
   RouterProvider 
 } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react';
+import {Amplify} from 'aws-amplify';
 
 // layouts and pages
 import RootLayout from './layouts/RootLayout'
