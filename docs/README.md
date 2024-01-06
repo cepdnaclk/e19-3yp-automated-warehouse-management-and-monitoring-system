@@ -122,6 +122,8 @@ Weight Sensors:
 WiFi Module:
 - Purpose: Facilitate precise location tracking.
 - Functionality: Scan WiFi beacons and measure signal strength to determine the pallet jack's location, enhancing navigation accuracy.<br><br>
+- But the accuracy of this was quit low than we expected.
+- Optical line following is a better option for this purpose.
 
 ## Hardware and Software Designs
 ### Hardware Design
