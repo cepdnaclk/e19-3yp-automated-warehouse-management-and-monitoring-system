@@ -65,8 +65,6 @@ https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitori
   </video>
 </div>
 
-<script src="https://vjs.zencdn.net/5.10.4/video.js"></script>
-
 </p><br>
 
 ### Challenges of current system
@@ -108,7 +106,7 @@ https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitori
 ## Solution Architecture
 ### High level diagram 
 <p align ="center">
-     ![Capture1](https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitoring-system/assets/115541700/b5db2601-4038-46c2-ae86-30d9637026b5)
+    <img src="asserts/images/9.png" width=1000  />
 </p><br>
 
 The high-level solution architecture for the automated pallet jack comprises three key components.
@@ -128,7 +126,7 @@ WiFi Module:
 ## Hardware and Software Designs
 ### Hardware Design
 <p align ="center">
-     ![Capture2](https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitoring-system/assets/115541700/72ecb899-6e0d-44af-89fb-495f9a60efbe)
+     <img src="asserts/images/11.png" width=1000  />
 </p><br>
 
 
@@ -158,10 +156,10 @@ What was achieved, future developments, commercialization plans
 
 ## Links
 
-- [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
-- [Project Page](https://cepdnaclk.github.io/{{ page.repository-name}}){:target="_blank"}
+- [Project Repository](https://github.com/cepdnaclk/e19-3yp-automated-warehouse-management-and-monitoring-system)
+- [Project Page](https://cepdnaclk.github.io/e19-3yp-automated-warehouse-management-and-monitoring-system)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
-
+  
 [//]: # (Please refer this to learn more about Markdown syntax)
 [//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
