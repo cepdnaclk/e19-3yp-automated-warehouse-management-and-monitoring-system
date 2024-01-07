@@ -1,4 +1,4 @@
-import { Grid, GridItem, Button, Flex, Spacer,Select } from '@chakra-ui/react'
+import { Grid, GridItem, Button, Flex, Spacer,Select, List } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import logo from '/img/LOGO.png'
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
@@ -19,6 +19,10 @@ import {
   MenuDivider,
 } from '@chakra-ui/react'
 import { AiOutlineUser } from 'react-icons/ai';
+import '../../css/gridItem.css';
+import '../../css/palletJackList.css';
+import ListItem from '../../components/listItem'
+
 
 
 
@@ -156,10 +160,22 @@ export default function Admin() {
   </Flex>
 
   </GridItem>
-  <GridItem bg='#140d07' area={'nav'}>
-  Nav
-</GridItem>
-<GridItem bg='#140d07' area={'main'}>
+  <GridItem className = 'gridItem' area={'nav'}>
+        <div className='gridItemDiv'>
+          <img src='/img/Map.jpeg' alt='logo' className='gridItemImg' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack1' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack2' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack3' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack4' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack5' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack6' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack7' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack8' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack9' />
+          <img src='/img/locationTag.png' alt='logo' className='gridItemImgLocation palletJack10' />
+        </div>
+  </GridItem>
+{/* <GridItem bg='#140d07' area={'main'}>
   <Select placeholder="Select option" onChange={(e) => setSelectedItem(e.target.value)} paddingTop="3rem">
     {employees.map((employee) => (
       <option key={employee.id} value={employee.name}>
@@ -168,7 +184,12 @@ export default function Admin() {
     ))}
   </Select>
   {selectedItem && <div>Selected Item: {selectedItem}</div>}
-</GridItem>
+</GridItem> */}
+  <GridItem  padding={'20px'} paddingTop={'40px'} h={'100%'} bg='#140d07' area={'main'}>
+        <div className='PJListContainer'>
+          <ListItem/>
+        </div>
+  </GridItem>
 </Grid>
   )
 }
