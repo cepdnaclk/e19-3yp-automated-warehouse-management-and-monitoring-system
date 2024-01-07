@@ -1,9 +1,12 @@
+import { Amplify } from 'aws-amplify';
 import logo from '/img/PALLETPRO1.png';
 import { Flex } from '@chakra-ui/react';
 import { Grid, GridItem, Text, Image, Stack } from '@chakra-ui/react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
 import { color } from 'framer-motion';
 import { FaSignInAlt, FaUserPlus } from 'react-icons/fa';
+
+import { awsExports } from '../Aws-exports';
 import React, { useState } from 'react';
 import { Input } from '@chakra-ui/react';
 import {
@@ -16,7 +19,19 @@ import {
   ModalCloseButton,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
-
+import { Authenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+try {
+  Amplify.configure({
+    Auth: {
+      region: awsExports.REGION,
+      userPoolId: awsExports.USER_POOL_ID,
+      userPoolWebClientId: awsExports.APP_CLIENT_ID,
+    }
+  });
+} catch (error) {
+  console.error("Amplify configuration error: ", error);
+}
 
 export default function Dashboard() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -66,7 +81,7 @@ export default function Dashboard() {
 </Text>
 
           <Stack direction='row' spacing={4}>
-          <button
+  <button
   style={{
     display: 'flex', 
     alignItems: 'center', 
@@ -108,50 +123,14 @@ export default function Dashboard() {
           </ModalHeader>
           <ModalCloseButton color="black" />
           <ModalBody p={4}>
-            <Input
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              mb={4}
-              variant="filled"
-              borderColor="teal.200"
-            />
-            <Input
-              placeholder="SSID"
-              value={ssid}
-              onChange={(e) => setSSID(e.target.value)}
-              mb={4}
-              variant="filled"
-              borderColor="teal.200"
-            />
-            <Input
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              mb={4}
-              variant="filled"
-              borderColor="teal.200"
-            />
-            <Input
-              placeholder="Phone Number"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              mb={4}
-              variant="filled"
-              borderColor="teal.200"
-            />
-            <Flex justifyContent="center" alignItems="center">
-            <Button
-              colorScheme="teal"
-              size="lg"
-              onClick={() => {
-                
-                setIsSignUpModalOpen(false);
-              }}
-            >
-              Sign Up
-            </Button>
-            </Flex>
+          <Authenticator>
+              {({ signOut, user }) => (
+                <div>
+                  <p>Welcome {user.username}</p>
+                  <button onClick={signOut}>Sign Out</button>
+                </div>
+              )}
+            </Authenticator>
           </ModalBody>
         </ModalContent>
       </Modal>
