@@ -13,6 +13,7 @@ import Dashboard from './pages/Dashboard'
 import User from './pages/User'
 import Admin from './pages/Admin'
 
+
 // router and routes
 const router = createBrowserRouter(
   createRoutesFromElements(
