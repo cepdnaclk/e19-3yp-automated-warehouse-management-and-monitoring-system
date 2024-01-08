@@ -1,11 +1,11 @@
 #include <Arduino.h>
 
-#define MOTOR1_EN_PIN 23
-#define PIN_IN1 22
-#define PIN_IN2 21
-#define MOTOR2_EN_PIN 5
-#define PIN_IN3 19
-#define PIN_IN4 18
+#define MOTOR1_EN_PIN 19
+#define PIN_IN1 18
+#define PIN_IN2 5
+#define MOTOR2_EN_PIN 15
+#define PIN_IN3 4
+#define PIN_IN4 2
 
 
 void MOTOR1_Move(int pwmVal,int pin1,int pin2) {
