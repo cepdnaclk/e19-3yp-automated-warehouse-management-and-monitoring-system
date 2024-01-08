@@ -46,7 +46,7 @@ import "../../css/palletJackList.css";
 import "../../css/adminLayout.css";
 
 import EmployeeData from "../../components/EmployeesData";
-import ListItem from "../../components/listItem";
+import ListItem from "../../components/ListItem";
 
 export default function Admin() {
   const [selectedEmployee, setSelectedEmployee] = useState(null);
