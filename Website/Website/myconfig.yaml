@@ -1,0 +1,15 @@
+default:
+  deploy:
+    parameters:
+      stack_name: cognito-react
+      resolve_s3: true
+      s3_prefix: cognito-react
+      region: us-east-1
+      profile: default
+      confirm_changeset: true
+      capabilities: CAPABILITY_IAM
+      disable_rollback: true
+      parameter_overrides: Env="dev" S3BucketName="PalletPro" CognitoUserPoolName="Palletpro-userpool"
+        CognitoWebClientName="Palletpro-webclient"
+      image_repositories: []
+version: 0.1

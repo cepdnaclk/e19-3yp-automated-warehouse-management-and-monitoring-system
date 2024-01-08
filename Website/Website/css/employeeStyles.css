@@ -1,0 +1,46 @@
+.listContainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollableList {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scrollableList::-webkit-scrollbar {
+  width: 25px;
+}
+
+.scrollableList::-webkit-scrollbar-track {
+    margin-top: 10px;
+    background: transparent;
+    border: 2px solid #c0c0c000;
+    border-radius: 20px;
+}
+.scrollableList::-webkit-scrollbar-thumb {
+  background: #319795;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+/* Hide the scrollbar on Firefox and newer Edge versions */
+.scrollableList {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.scrollableList li {
+    margin: 1rem;
+    text-align: center;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid #424242;
+}
