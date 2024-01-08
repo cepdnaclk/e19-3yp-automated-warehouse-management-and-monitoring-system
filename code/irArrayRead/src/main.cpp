@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-const int ldrArray[] = {15, 13, 4, 25, 33, 14, 27, 26};
+const int ldrArray[] = {34, 35, 32, 33, 25, 26, 27, 14};
 
 void setup() {
   for(int i = 0; i < 8; i++) {

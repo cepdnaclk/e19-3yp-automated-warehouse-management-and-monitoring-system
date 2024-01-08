@@ -1,11 +1,11 @@
 #include <Arduino.h>
 
-#define MOTOR1_EN_PIN 23
-#define PIN_IN1 22
-#define PIN_IN2 21
-#define MOTOR2_EN_PIN 5
-#define PIN_IN3 19
-#define PIN_IN4 18
+#define MOTOR1_EN_PIN 19
+#define PIN_IN1 18
+#define PIN_IN2 5
+#define MOTOR2_EN_PIN 15
+#define PIN_IN3 4
+#define PIN_IN4 2
 
 int P, D, I, previousError, PIDvalue, error;
 int lsp, rsp;
@@ -19,7 +19,7 @@ int minValues[6], maxValues[6], threshold[6];
 void calibrate();
 void followTheLine();
 
-const int ldrArray[] = {15, 13, 4, 25, 33, 14, 27, 26};
+const int ldrArray[] = {34, 35, 32, 33, 25, 26, 27, 14};
 int *ldrArrayValues = new int[8];
 int *ldrArrayAverage = new int[5];
 
@@ -132,6 +132,7 @@ void followTheLine(){
 
 void calibrate()
 {
+  delay(5000);
   Serial.println("Calibrating...");
   for(int i = 0; i < 8; i++) {
       ldrArrayValues[i] = analogRead(ldrArray[i]);
@@ -151,9 +152,7 @@ void calibrate()
   
   for (int i = 0; i < 3000; i++)
   {
-    Serial.println("Moving motor 1");
     MOTOR1_Move(200,HIGH,LOW);
-    Serial.println("Moving motor 2");
     MOTOR2_Move(200,LOW,HIGH);
 
     for(int i = 0; i < 8; i++) {
