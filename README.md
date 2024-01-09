@@ -94,7 +94,12 @@ WiFi Module:
 - Purpose: Facilitate precise location tracking.
 - Functionality: Scan WiFi beacons and measure signal strength to determine the pallet jack's location, enhancing navigation accuracy.
 - But the accuracy of this was quit low than we expected.
-- Optical line following is a better option for this purpose.
+- So we decided to use RFID tags for locate the pallet jack.
+
+RFID Tags:
+- Purpose: Enable wireless data transmission and facilitate efficient tracking.
+- Functionality: RFID tags on pallet jacks emit unique signals when in range of RFID readers placed strategically in the warehouse, allowing for precise and quick 
+                 identification of the pallet jack's location within the facility.
 
 
 ## Hardware and Software Designs
