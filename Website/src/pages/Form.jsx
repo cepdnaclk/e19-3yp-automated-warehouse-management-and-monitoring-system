@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DeviceStatus from "../../components/DeviceStatus";
 
 export default function App() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,8 @@ export default function App() {
   };
 
   return (
+    <div>
+      <DeviceStatus></DeviceStatus>
     <form onSubmit={handleSubmit}>
       <label>
         Username:
@@ -38,5 +41,7 @@ export default function App() {
       </label>
       <input type="submit" value="Submit" />
     </form>
+    </div>
+    
   );
 }

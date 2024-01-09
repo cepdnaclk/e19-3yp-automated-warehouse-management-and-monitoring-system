@@ -12,6 +12,8 @@ import RootLayout from './layouts/RootLayout'
 import Dashboard from './pages/Dashboard'
 import User from './pages/User'
 import Admin from './pages/Admin'
+import Form from './pages/Form'
+
 
 
 // router and routes

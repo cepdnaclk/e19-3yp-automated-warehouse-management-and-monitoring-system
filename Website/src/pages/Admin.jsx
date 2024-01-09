@@ -58,19 +58,19 @@ export default function Admin() {
   username,
   password,
   });
-  const mqttSub = (subscription) => {
-    if (client) {
-      const { topic, qos } = subscription
-      client.subscribe(topic, { qos }, (error) => {
-        if (error) {
-          console.log('Subscribe to topics error', error)
-          return
-        }
-        console.log(`Subscribe to topics: ${topic}`)
-        setIsSub(true)
-      })
-    }
-  }
+  // const mqttSub = (subscription) => {
+  //   if (client) {
+  //     const { topic, qos } = subscription
+  //     client.subscribe(topic, { qos }, (error) => {
+  //       if (error) {
+  //         console.log('Subscribe to topics error', error)
+  //         return
+  //       }
+  //       console.log(`Subscribe to topics: ${topic}`)
+  //       setIsSub(true)
+  //     })
+  //   }
+  // }
   const [selectedEmployee, setSelectedEmployee] = useState(null);
   const [isEmployeesOpen, setIsEmployeesOpen] = useState(false);
   const [isCreateMapOpen, setIsCreateMapOpen] = useState(false);
