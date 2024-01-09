@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors'); // Import the cors middlewareconst http = require('http');
 const http = require('http');
 const socketIo = require('socket.io');
+// const mqtt = require("mqtt");
+
 
 const app = express();
 app.use(cors());
@@ -43,6 +45,7 @@ async function getEmployees() {
       username: u.username,
       email : u.email,
       phoneNumber: u.phoneNumber,
+      available: u.free,
     }));
   } catch (error) {
     console.error('Error fetching pallet data:', error);
@@ -54,7 +57,7 @@ async function getEmployees() {
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:5173", // Your frontend domain
+    origin:  "*", // Your frontend domain
     methods: ["GET", "POST"]
   }
 });
@@ -63,6 +66,37 @@ io.on('connection', async (socket) => {
   socket.emit('palletJacks', await getPalletJacksData());
   socket.emit('employees', await getEmployees());
 });
+
+
+// const clientId = "emqx_express_" + Math.random().toString(16).substring(2, 8);
+// const username = "emqx_test";
+// const password = "emqx_test";
+// const mainControllerTopic = "esp8266/test";
+
+// // Create an MQTT client
+// const mqttClient = mqtt.connect("wss://broker.emqx.io:8084/mqtt", {
+//   clientId,
+//   username,
+//   password,
+// });
+
+// mqttClient.on("connect", () => {
+//   console.log("Connected to MQTT broker");
+
+//   // Subscribe to the main controller topic
+//   mqttClient.subscribe(mainControllerTopic, (err) => {
+//     if (!err) {
+//       console.log(mainControllerTopic);
+//     }
+//   });
+// });
+
+// mqttClient.on("message", (topic, message) => {
+//   // Received message from the subscribed topic
+//   console.log(message.toString());
+//   // You can process the message here or send it to your Express routes.
+// });
+
 
 
 app.post('/signup', async (req, res) => {
@@ -156,14 +190,14 @@ server.listen(port, () => {
 });
 
 
-// app.get('/palletJacksData', async (req, res) => {
-//   try {
-//     res.json(await getPalletJacksData());
-//   } catch (error) {
-//     console.error('Error fetching pallet data:', error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
+app.get('/palletJacksData', async (req, res) => {
+  try {
+    res.json(await getPalletJacksData());
+  } catch (error) {
+    console.error('Error fetching pallet data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 // // Start the server
 // app.listen(port, () => {
