@@ -121,13 +121,18 @@ Testing done on hardware and software, detailed + summarized results
 | ------------- |:---------:|:----------:|-------:|
 | ESP32 - Wifi Module   | 1         | 1500 LKR     | 1500 LKR |
 | ESP8266 - Wifi Module   | 6         | 700 LKR     | 4200 LKR |
-| L298N Motor Driver   | 2         | 430 LKR     | 860 LKR |
-| HC-SR04 Ultrasonic Sensor   | 2        | 250 LKR     | 500 LKR |
-| Strin Gauge   | 1         | 400 LKR     | 400 LKR |
+| L298N Motor Driver   | 1         | 430 LKR     | 430 LKR |
+| HC-SR04 Ultrasonic Sensor   | 3        | 250 LKR     | 750 LKR |
+| Load Cells   | 4        | 300 LKR     | 1200 LKR |
 | Motors   | 2         | 4000 LKR     | 8000 LKR |
 | Wheels   | 4         | 1500 LKR     | 6000 LKR |
-| KY003 Hall Effect Sensors   | 3         | 170 LKR     | 510 LKR |
+| IR Array   | 1         | 790 LKR     | 790 LKR |
+| Thumb joystick   | 1         | 320 LKR     | 320 LKR |
+| Jumper wires   | 200         | 5 LKR     | 1000 LKR |
+| Other Electronic Materials   | 1         | 2000 LKR     | 2000 LKR |
 | Other Non-Electronic Material   | 1         | 5000 LKR     | 5000 LKR |
+
+| Total                    31190 LKR |
 
 ## Conclusion
 
