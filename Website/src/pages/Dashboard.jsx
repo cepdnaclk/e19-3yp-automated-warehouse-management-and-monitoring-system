@@ -1,4 +1,6 @@
+import { API_BASE_URL } from '../config';
 import logo from "/img/PALLETPRO1.png";
+import  { useNavigate } from "react-router-dom";
 import { Flex } from "@chakra-ui/react";
 import { Grid, GridItem, Text, Image, Stack } from "@chakra-ui/react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
@@ -23,9 +25,72 @@ export default function Dashboard() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [newPassword, setNewPassword ]= useState("");
   const [ssid, setSSID] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const navigate = useNavigate();
+
+  const handleSignUp = async () => {
+    try {
+      const response = await fetch(API_BASE_URL+'/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username:name,
+          userId:ssid,
+          password:newPassword,
+          email,
+          phoneNumber,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        navigate('/user');
+
+      } else {
+        // Signup failed, handle error (data.error contains the error message)
+        console.log(data.error);
+      }
+    } catch (error) {
+      console.log('Error during signup:', error);
+    }
+  };
+
+  const handleLogin = async () => {
+                        
+      if (username === "admin" && password === "admin"){
+        navigate('/admin');
+      }
+
+    try {
+      const response = await fetch(API_BASE_URL+'/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        navigate('/user');
+        // Login successful, you may want to handle success appropriately
+        console.log(data.message);
+      } else {
+        // Login failed, handle error (data.error contains the error message)
+        console.error(data.error);
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
+  };
+
   return (
     <Grid
       templateAreas={`"header header"
@@ -190,12 +255,22 @@ export default function Dashboard() {
                     variant="filled"
                     borderColor="teal.200"
                   />
+                  <Input
+                    type="password"
+                    placeholder="Password"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    mb={4}
+                    variant="filled"
+                    borderColor="teal.200"
+                  />
                   <Flex justifyContent="center" alignItems="center">
                     <Button
                       colorScheme="teal"
                       size="lg"
                       onClick={() => {
                         setIsSignUpModalOpen(false);
+                        handleSignUp();
                       }}
                     >
                       Sign Up
@@ -276,6 +351,7 @@ export default function Dashboard() {
                       size="lg"
                       onClick={() => {
                         setIsLoginModalOpen(false);
+                        handleLogin();
                       }}
                     >
                       Login
