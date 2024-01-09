@@ -124,14 +124,14 @@ Testing done on hardware and software, detailed + summarized results
 | L298N Motor Driver   | 1         | 430 LKR     | 430 LKR |
 | HC-SR04 Ultrasonic Sensor   | 3        | 250 LKR     | 750 LKR |
 | Load Cells   | 4        | 300 LKR     | 1200 LKR |
-| Motors   | 2         | 4000 LKR     | 8000 LKR |
-| Wheels   | 4         | 1500 LKR     | 6000 LKR |
+| Motors   | 2         | 3000 LKR     | 6000 LKR |
+| Wheels   | 4         | 1000 LKR     | 4000 LKR |
 | IR Array   | 1         | 790 LKR     | 790 LKR |
 | Thumb joystick   | 1         | 320 LKR     | 320 LKR |
 | Jumper wires   | 200         | 5 LKR     | 1000 LKR |
 | Other Electronic Materials   | 1         | 2000 LKR     | 2000 LKR |
-| Other Non-Electronic Material   | 1         | 5000 LKR     | 5000 LKR |
-| Total   |          |      | 31190 LKR |
+| Other Non-Electronic Material   | 1         | 3000 LKR     | 3000 LKR |
+| Total   |          |      | 25190 LKR |
 
 
 
