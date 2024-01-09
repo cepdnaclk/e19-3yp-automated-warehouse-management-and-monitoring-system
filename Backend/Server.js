@@ -43,6 +43,7 @@ async function getEmployees() {
       username: u.username,
       email : u.email,
       phoneNumber: u.phoneNumber,
+      available: u.free,
     }));
   } catch (error) {
     console.error('Error fetching pallet data:', error);
@@ -54,7 +55,7 @@ async function getEmployees() {
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:5173", // Your frontend domain
+    origin:  "*", // Your frontend domain
     methods: ["GET", "POST"]
   }
 });
