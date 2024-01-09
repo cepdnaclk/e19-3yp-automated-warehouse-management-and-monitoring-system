@@ -44,7 +44,7 @@ export default function Dashboard() {
         alignItems="center"
       >
         <Link
-          to="/admin"
+          to="/form"
           style={{
             color: "white",
             textDecoration: "none",
