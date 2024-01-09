@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function App() {
+export default function App() {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
