@@ -62,7 +62,6 @@ export default function Dashboard() {
   };
 
   const handleLogin = async () => {
-                        
       if (username === "admin" && password === "admin"){
         navigate('/admin');
       }

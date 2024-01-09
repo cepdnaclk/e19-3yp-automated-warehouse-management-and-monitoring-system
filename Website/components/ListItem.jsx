@@ -19,6 +19,16 @@ function ListItem() {
       socket.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+    axios.get(API_BASE_URL+'/palletJacksData' )
+      .then(response => {
+        setPalletJacks(response.data);
+      })
+      .catch(error => {
+        console.error('There was an error fetching Pallet Jacks data!', error);
+      });
+  }, []);
   return (
     <div className="listContainer">
       <ul className="scrollableList">
@@ -45,12 +55,3 @@ function ListItem() {
 export default ListItem;
 
 
-// useEffect(() => {
-//   axios.get(API_BASE_URL+'/palletJacksData' )
-//     .then(response => {
-//       setPalletJacks(response.data);
-//     })
-//     .catch(error => {
-//       console.error('There was an error fetching Pallet Jacks data!', error);
-//     });
-// }, []);
