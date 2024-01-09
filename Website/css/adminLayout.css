@@ -1,0 +1,16 @@
+.modalFileter{
+    backdrop-filter: blur(10px);
+}
+
+.modal {
+    height: 90vh;
+}
+
+.inputForms{
+    border-radius: 10px;
+    border: 2px solid #d6cfcf;
+}
+
+.inputFormsImg{
+    padding: 5px 0 0 20px;
+}
