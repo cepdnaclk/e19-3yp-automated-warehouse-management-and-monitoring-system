@@ -1,68 +1,31 @@
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { API_BASE_URL } from '../src/config';
 import "../css/employeeStyles.css";
+import io from 'socket.io-client';
 
 function EmployeeData(props) {
-  const [employees, setEmployee] = useState([
-    {
-      id: 1,
-      name: "John Doe",
-      contactEmail: "john.doe@example.com",
-      contactPhone: "123-456-7890",
-    },
-    {
-      id: 2,
-      name: "Dasun Silva",
-      contactEmail: "john.doe@example.com",
-      contactPhone: "123-456-7890",
-    },
-    {
-      id: 3,
-      name: "Dasun Silva",
-      contactEmail: "john.doe@example.com",
-      contactPhone: "123-456-7890",
-    },
-    {
-      id: 4,
-      name: "Dasun Silva",
-      contactEmail: "john.doe@example.com",
-      contactPhone: "123-456-7890",
-      },
-    {
-      id: 1,
-      name: "John Doe",
-      contactEmail: "john.doe@example.com",
-      contactPhone: "123-456-7890",
-    },
-    {
-      id: 2,
-      name: "Dasun Silva",
-      contactEmail: "john.doe@example.com",
-      contactPhone: "123-456-7890",
-    },
-    {
-      id: 3,
-      name: "Dasun Silva",
-      contactEmail: "john.doe@example.com",
-      contactPhone: "123-456-7890",
-    },
-    {
-      id: 4,
-      name: "Dasun Silva",
-      contactEmail: "john.doe@example.com",
-      contactPhone: "123-456-7890",
-    },
-  ]);
+  const [employees, setEmployee] = useState([]);
+  useEffect(() => {
+    const socket = io(API_BASE_URL);
 
+    socket.on('employees', (data) => {
+      setEmployee(data);
+    });
+
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
   return (
     <div className="listContainer">
       <ul className="scrollableList">
         {employees.map((employee) => (
           <li key={employee.id}>
             <div className="employee-item">
-              <p>Employee ID: {employee.id}</p>
-              <p>Employee Name: {employee.name}</p>
-              <p>Email: {employee.contactEmail}</p>
-              <p>Contact Number: {employee.contactPhone}</p>
+              <p>Employee ID: {employee.userId}</p>
+              <p>Employee Name: {employee.username}</p>
+              <p>Email: {employee.email}</p>
+              <p>Contact Number: {employee.phoneNumber}</p>
             </div>
           </li>
         ))}

@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../config';
 import {
   Grid,
   GridItem,
@@ -60,6 +61,8 @@ export default function Admin() {
   const onCloseAddPallet = () => setIsAddPalletOpen(false);
   const onOpenAddPallet = () => setIsAddPalletOpen(true);
   const [selectedItem, setSelectedItem] = useState("");
+  const [palletId, setPalletId] = useState("");
+  const [assignedWorker, setAssignedWorker] = useState("");
   useEffect(() => {
     axios
       .get("https://your-aws-server.com/api/employees") // Replace with your actual API endpoint
@@ -70,6 +73,33 @@ export default function Admin() {
         console.error("There was an error!", error);
       });
   }, []);
+
+  const handleAddPallet = () => {
+    // You can perform any validation here before sending the request
+    if (!palletId) {
+      // Handle validation error
+      return;
+    }
+    // Send a request to your server to add a new pallet
+    axios
+      .post(API_BASE_URL+'/addpallet', {
+        palletId,
+        assignedWorker,
+      })
+      .then((response) => {
+        // Handle success, e.g., show a success message
+        console.log(response.data);
+        // Optionally, you can reset the form or close the modal here
+        setPalletId("");
+        setAssignedWorker("");
+        onCloseAddPallet();
+      })
+      .catch((error) => {
+        // Handle error, e.g., show an error message
+        console.error("There was an error!", error);
+      });
+  };
+
 
   return (
     <Grid
@@ -142,16 +172,29 @@ export default function Admin() {
               </ModalHeader>
               <ModalCloseButton />
               <ModalBody>
-                <FormControl>
-                  <FormLabel>Pallet ID</FormLabel>
-                  <NumberInput className = 'inputForms' min={0}>
-                    <NumberInputField />
-                  </NumberInput>
-                </FormControl>
+              <FormControl>
+              <FormLabel>Pallet ID</FormLabel>
+              <NumberInput
+                className="inputForms"
+                min={0}
+                value={palletId}
+                onChange={(value) => setPalletId(value)}
+              >
+                <NumberInputField />
+              </NumberInput>
+
+              <FormLabel>Assigned Worker</FormLabel>
+              <Input
+                className="inputForms"
+                type="text"
+                value={assignedWorker}
+                onChange={(e) => setAssignedWorker(e.target.value)}
+              />
+            </FormControl>
               </ModalBody>
 
               <ModalFooter>
-                <Button colorScheme="teal" mr={3} onClick={onCloseCreateMap}>
+                <Button colorScheme="teal" mr={3} onClick={handleAddPallet}>
                   Save
                 </Button>
                 <Button variant="ghost" onClick={onCloseCreateMap}>
@@ -305,7 +348,7 @@ export default function Admin() {
             <h1>Pallet Jacks</h1>
           </div>
           <div className="PJListContainer">
-            <ListItem />
+          <ListItem/>
           </div>
         </div>
       </GridItem>
