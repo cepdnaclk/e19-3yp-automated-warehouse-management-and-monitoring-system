@@ -107,12 +107,35 @@ RFID Tags:
 <p align ="center">
      <img src="docs/asserts/images/pp.PNG" width=1000  />
 </p><br>
+<br>
+
+### Hardware Implementation
+
+<p align ="center">
+     <img src="docs/asserts/images/hardware.jpg" width=1000  />
+</p><br>
+<p align ="center">
+     <img src="docs/asserts/images/38.jpg" width=1000  />
+</p><br>
+<p align ="center">
+     <img src="docs/asserts/images/37.jpg" width=1000  />
+</p><br>
+<p align ="center">
+     <img src="docs/asserts/images/36.jpg" width=1000  />
+</p><br>
+<p align ="center">
+     <img src="docs/asserts/images/39.jpg" width=1000  />
+</p><br>
 
 
 
 ## Testing
 
-Testing done on hardware and software, detailed + summarized results
+Software testing using Postman
+<p align ="center">
+     <img src="docs/asserts/images/Testing using PalletJack.png" width=1000  />
+</p><br>
+
 
 ## Detailed budget
 
