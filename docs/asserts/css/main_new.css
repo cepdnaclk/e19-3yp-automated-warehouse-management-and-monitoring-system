@@ -90,3 +90,55 @@
     background: rgba(2, 0, 17, 0.801) !important;
 }
 
+.footer-h4 {
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    padding-top: 100px !important;
+}
+
+.starting_para{
+    font-size: 20px !important;
+    margin-top: 20px;
+}
+
+.first-section {
+    padding: 150px 10px;
+}
+
+.fetures-h2 {
+    margin-bottom: 80px;
+}
+
+.high-level-arch {margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.high-level-arch-container {
+    margin-top: 30px;
+}
+
+.join-us-sec {
+    margin-top: 100px;
+}
+
+.footer-section-about {
+    padding-top: 50px !important;
+}
+
+.itemImg-team{
+    width: 100% !important;
+    padding: 10px;
+    border-radius: 200px;
+    margin-bottom: 20px;
+
+}
+
+.image-col {
+    max-width: 20%;
+}
+
+.footer-team {
+    margin-bottom: 50px !important;
+}
