@@ -77,7 +77,7 @@ Our project focuses on the design, development, and implementation of an advance
 ## Solution Architecture
 ### High level diagram 
 <p align ="center">
-     <img src="docs/asserts/images/9.png" width=1000  />
+     <img src="docs/asserts/images/ss.PNG" width=1000  />
 </p><br>
 
 The high-level solution architecture for the automated pallet jack comprises three key components.
@@ -105,7 +105,7 @@ RFID Tags:
 ## Hardware and Software Designs
 ### Hardware Design
 <p align ="center">
-     <img src="docs/asserts/images/11.png" width=1000  />
+     <img src="docs/asserts/images/pp.PNG" width=1000  />
 </p><br>
 
 
@@ -121,13 +121,19 @@ Testing done on hardware and software, detailed + summarized results
 | ------------- |:---------:|:----------:|-------:|
 | ESP32 - Wifi Module   | 1         | 1500 LKR     | 1500 LKR |
 | ESP8266 - Wifi Module   | 6         | 700 LKR     | 4200 LKR |
-| L298N Motor Driver   | 2         | 430 LKR     | 860 LKR |
-| HC-SR04 Ultrasonic Sensor   | 2        | 250 LKR     | 500 LKR |
-| Strin Gauge   | 1         | 400 LKR     | 400 LKR |
-| Motors   | 2         | 4000 LKR     | 8000 LKR |
-| Wheels   | 4         | 1500 LKR     | 6000 LKR |
-| KY003 Hall Effect Sensors   | 3         | 170 LKR     | 510 LKR |
-| Other Non-Electronic Material   | 1         | 5000 LKR     | 5000 LKR |
+| L298N Motor Driver   | 1         | 430 LKR     | 430 LKR |
+| HC-SR04 Ultrasonic Sensor   | 3        | 250 LKR     | 750 LKR |
+| Load Cells   | 4        | 300 LKR     | 1200 LKR |
+| Motors   | 2         | 3000 LKR     | 6000 LKR |
+| Wheels   | 4         | 1000 LKR     | 4000 LKR |
+| IR Array   | 1         | 790 LKR     | 790 LKR |
+| Thumb joystick   | 1         | 320 LKR     | 320 LKR |
+| Jumper wires   | 200         | 5 LKR     | 1000 LKR |
+| Other Electronic Materials   | 1         | 2000 LKR     | 2000 LKR |
+| Other Non-Electronic Material   | 1         | 3000 LKR     | 3000 LKR |
+| Total   |          |      | 25190 LKR |
+
+
 
 ## Conclusion
 
