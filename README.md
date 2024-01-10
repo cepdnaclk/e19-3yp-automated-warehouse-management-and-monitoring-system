@@ -108,7 +108,9 @@ RFID Tags:
      <img src="docs/asserts/images/pp.PNG" width=1000  />
 </p><br>
 <br>
-### Hardware Implementation
+
+### Hardware Design
+
 <p align ="center">
      <img src="docs/asserts/images/hardware.jpg" width=1000  />
 </p><br>
