@@ -9,10 +9,10 @@
 const char *ssid = "A30s";
 const char *password = "dasun531";
 
-const char *mqtt_broker = "broker.hivemq.com";
-const char *topic = "esp8266/test";
-// const char *mqtt_username = "emqx";
-// const char *mqtt_password = "public";
+const char *mqtt_broker = "broker.emqx.io";
+const char *topic = "esp8266/led";
+const char *mqtt_username = "emqx";
+const char *mqtt_password = "public";
 const int mqtt_port = 1883;
 
 PN532_I2C pn532_i2c(Wire);

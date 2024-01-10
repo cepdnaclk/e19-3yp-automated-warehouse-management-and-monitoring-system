@@ -44,6 +44,7 @@
     background-size: cover !important;
 }
 
+
 .new_styles_section_title{
     position: relative;
     z-index: 100;
@@ -88,3 +89,4 @@
 .about_us_overlay {
     background: rgba(2, 0, 17, 0.801) !important;
 }
+
