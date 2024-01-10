@@ -112,8 +112,10 @@ RFID Tags:
 
 ## Testing
 
-Testing done on hardware and software, detailed + summarized results
-
+Software testing using Postman
+<p align ="center">
+     <img src="docs/asserts/images/postman.PNG" width=1000  />
+</p><br>
 
 
 ## Detailed budget

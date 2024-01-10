@@ -146,7 +146,10 @@ RFID Tags:
 
 ## Testing
 
-Testing done on hardware and software, detailed + summarized results
+Testing done on Software using Postman
+<p align ="center">
+     <img src="asserts/images/Testing using PalletJack.png" width=1000  />
+</p><br>
 
 ## Detailed budget
 
