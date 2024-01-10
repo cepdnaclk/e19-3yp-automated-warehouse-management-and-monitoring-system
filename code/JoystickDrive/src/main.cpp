@@ -176,27 +176,6 @@ unsigned long int j = 0;
 unsigned long int k = 0;
 
 void automatedMovement() {
-  for (i; i < 5000;i++){
-    MOTOR2_Move(250, HIGH, LOW);
-    MOTOR1_Move(250, LOW, HIGH);
-  Serial.print("Moving forward");
-    Serial.println(i);
-    delay(10);
-  }
-  for (j; j < 4500;j++){
-    MOTOR2_Move(250, HIGH, LOW);
-    MOTOR1_Move(120, LOW, HIGH);
-  Serial.print("Moving right");
-    Serial.println(j);
-    delay(6);
-  }
-  for (k; k < 2500;k++){
-    MOTOR2_Move(250, HIGH, LOW);
-    MOTOR1_Move(250, LOW, HIGH);
-  Serial.print("Moving right");
-    Serial.println(k);
-    delay(6);
-  }
   //     for(int i = 0; i < 8; i++) {
   //       ldrArrayValues[i] = analogRead(ldrArray[i]);
   //     }
