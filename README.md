@@ -118,13 +118,13 @@ RFID Tags:
      <img src="docs/asserts/images/38.jpg" width=1000  />
 </p><br>
 <p align ="center">
-     <img src="docs/asserts/images/37.PNG" width=1000  />
+     <img src="docs/asserts/images/37.jpg" width=1000  />
 </p><br>
 <p align ="center">
-     <img src="docs/asserts/images/36.PNG" width=1000  />
+     <img src="docs/asserts/images/36.jpg" width=1000  />
 </p><br>
 <p align ="center">
-     <img src="docs/asserts/images/39.PNG" width=1000  />
+     <img src="docs/asserts/images/39.jpg" width=1000  />
 </p><br>
 
 
