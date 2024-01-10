@@ -108,6 +108,11 @@ RFID Tags:
      <img src="docs/asserts/images/pp.PNG" width=1000  />
 </p><br>
 
+### Software Designs
+<p align ="center">
+     <img src="docs/asserts/images/mobile.PNG" width=1000  />
+</p><br>
+
 
 
 ## Testing
