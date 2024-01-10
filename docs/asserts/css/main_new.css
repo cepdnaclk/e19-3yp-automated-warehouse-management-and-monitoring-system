@@ -120,7 +120,7 @@
 }
 
 .join-us-sec {
-    margin-top: 100px;
+    
 }
 
 .footer-section-about {
@@ -141,4 +141,8 @@
 
 .footer-team {
     margin-bottom: 50px !important;
+}
+
+.section-gap-bottom-about {
+    padding: 100px 0;
 }
