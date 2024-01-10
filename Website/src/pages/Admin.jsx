@@ -50,6 +50,28 @@ import EmployeeData from "../../components/EmployeesData";
 import ListItem from "../../components/ListItem";
 
 export default function Admin() {
+  const clientId = "emqx_react_" + Math.random().toString(16).substring(2, 8);
+  const username = "emqx_test";
+  const password = "emqx_test";
+  const topic = "esp8266/test";
+  const client = mqtt.connect("ws://broker.emqx.io:8083/mqtt", {
+  clientId,
+  username,
+  password,
+  });
+  // const mqttSub = (subscription) => {
+  //   if (client) {
+  //     const { topic, qos } = subscription
+  //     client.subscribe(topic, { qos }, (error) => {
+  //       if (error) {
+  //         console.log('Subscribe to topics error', error)
+  //         return
+  //       }
+  //       console.log(`Subscribe to topics: ${topic}`)
+  //       setIsSub(true)
+  //     })
+  //   }
+  // }
   const [selectedEmployee, setSelectedEmployee] = useState(null);
   const [isEmployeesOpen, setIsEmployeesOpen] = useState(false);
   const [isCreateMapOpen, setIsCreateMapOpen] = useState(false);

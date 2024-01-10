@@ -12,6 +12,8 @@ import RootLayout from './layouts/RootLayout'
 import Dashboard from './pages/Dashboard'
 import User from './pages/User'
 import Admin from './pages/Admin'
+import Form from './pages/Form'
+
 
 
 // router and routes
@@ -22,6 +24,7 @@ const router = createBrowserRouter(
       <Route index element={<Dashboard />} />
       <Route path="user" element={<User />} />
       <Route path="admin" element={<Admin />} />
+      <Route path="form" element={<Form />} />
     </Route>
   )
 )
