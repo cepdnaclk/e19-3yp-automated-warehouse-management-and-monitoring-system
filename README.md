@@ -114,7 +114,7 @@ RFID Tags:
 
 Software testing using Postman
 <p align ="center">
-     <img src="docs/asserts/images/postman.PNG" width=1000  />
+     <img src="docs/asserts/images/Testing using PalletJack.png" width=1000  />
 </p><br>
 
 
