@@ -136,6 +136,15 @@ Software testing using Postman
      <img src="docs/asserts/images/Testing using PalletJack.png" width=1000  />
 </p><br>
 
+## Hardware Design
+
+<p align ="center">
+     <img src="docs/asserts/images/Testing using circuit1.PNG" width=1000  />
+</p><br>
+<p align ="center">
+     <img src="docs/asserts/images/Testing using circuit2.PNG" width=1000  />
+</p><br>
+
 
 ## Detailed budget
 
