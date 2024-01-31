@@ -100,6 +100,11 @@ RFID Tags:
 - Purpose: Enable wireless data transmission and facilitate efficient tracking.
 - Functionality: RFID tags on pallet jacks emit unique signals when in range of RFID readers placed strategically in the warehouse, allowing for precise and quick 
                  identification of the pallet jack's location within the facility.
+  
+IR sensors:
+- Purpose: Use for optical line following part of the pallet jack.
+- Functionality : The IR sensors serve the functionality of detecting and interpreting infrared signals reflected from the floor, enabling the pallet jack to autonomously 
+                  follow a predefined path or line.
 
 
 ## Hardware and Software Designs
