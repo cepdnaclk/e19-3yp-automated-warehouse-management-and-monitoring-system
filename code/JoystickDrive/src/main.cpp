@@ -1,23 +1,23 @@
 #include <Arduino.h>
 
-#define MOTOR1_EN_PIN 19
-#define PIN_IN1 18
-#define PIN_IN2 5
-#define MOTOR2_EN_PIN 15
-#define PIN_IN3 4
-#define PIN_IN4 2
+// #define MOTOR1_EN_PIN 19
+// #define PIN_IN1 18
+// #define PIN_IN2 5
+// #define MOTOR2_EN_PIN 15
+// #define PIN_IN3 4
+// #define PIN_IN4 2
 #define joystickXPin 39
 #define joystickYPin 36
-#define switchPin 23
+// #define switchPin 23
 // #define alertPin 22
 // #define obstacleInputPin 13
-#define bounceDuration 20
+// #define bounceDuration 20
 
 // const int ldrArray[] = {34, 35, 32, 33, 25, 26, 27, 14};
 
 // bool obstacaleAlert = false;
-volatile unsigned long bounceTime = 0;
-bool manualMode = false;
+// volatile unsigned long bounceTime = 0;
+// bool manualMode = false;
 // int *ldrArrayValues = new int[8];
 // int *ldrArrayAverage = new int[5];
 // bool stopRunning = false;
@@ -33,38 +33,38 @@ bool manualMode = false;
 
 // int minValues[6], maxValues[6], threshold[6];
 
-void calibrate();
-void followTheLine();
-void switchInterrupt();
-void alertInterrupt();
-void obstacleInterrupt();
-void manualMovement();
-void automatedMovement();
+// void calibrate();
+// void followTheLine();
+// void switchInterrupt();
+// void alertInterrupt();
+// void obstacleInterrupt();
+// void manualMovement();
+// void automatedMovement();
 
-void MOTOR1_Move(int pwmVal, int pin1, int pin2)
-{
-  analogWrite(MOTOR1_EN_PIN, pwmVal);
-  digitalWrite(PIN_IN1, pin1);
-  digitalWrite(PIN_IN2, pin2);
-}
+// void MOTOR1_Move(int pwmVal, int pin1, int pin2)
+// {
+//   analogWrite(MOTOR1_EN_PIN, pwmVal);
+//   digitalWrite(PIN_IN1, pin1);
+//   digitalWrite(PIN_IN2, pin2);
+// }
 
-void MOTOR2_Move(int pwmVal, int pin1, int pin2)
-{
-  analogWrite(MOTOR2_EN_PIN, pwmVal);
-  digitalWrite(PIN_IN3, pin1);
-  digitalWrite(PIN_IN4, pin2);
-}
+// void MOTOR2_Move(int pwmVal, int pin1, int pin2)
+// {
+//   analogWrite(MOTOR2_EN_PIN, pwmVal);
+//   digitalWrite(PIN_IN3, pin1);
+//   digitalWrite(PIN_IN4, pin2);
+// }
 
 void setup()
 {
   Serial.begin(115200);
-  pinMode(MOTOR1_EN_PIN, OUTPUT);
-  pinMode(PIN_IN1, OUTPUT);
-  pinMode(PIN_IN2, OUTPUT);
-  pinMode(MOTOR2_EN_PIN, OUTPUT);
-  pinMode(PIN_IN3, OUTPUT);
-  pinMode(PIN_IN4, OUTPUT);
-  pinMode(switchPin, INPUT);
+  // pinMode(MOTOR1_EN_PIN, OUTPUT);
+  // pinMode(PIN_IN1, OUTPUT);
+  // pinMode(PIN_IN2, OUTPUT);
+  // pinMode(MOTOR2_EN_PIN, OUTPUT);
+  // pinMode(PIN_IN3, OUTPUT);
+  // pinMode(PIN_IN4, OUTPUT);
+  // pinMode(switchPin, INPUT);
   pinMode(joystickXPin, INPUT);
   pinMode(joystickYPin, INPUT);
 
@@ -72,10 +72,10 @@ void setup()
   //   pinMode(ldrArray[i], INPUT);
   // }
 
-  int switchState = digitalRead(switchPin);
-  manualMode = (switchState == HIGH);
+  // int switchState = digitalRead(switchPin);
+  // manualMode = (switchState == HIGH);
 
-  attachInterrupt(digitalPinToInterrupt(switchPin), switchInterrupt, CHANGE);
+  // attachInterrupt(digitalPinToInterrupt(switchPin), switchInterrupt, CHANGE);
   // attachInterrupt(digitalPinToInterrupt(alertPin), alertInterrupt, CHANGE);
   // attachInterrupt(digitalPinToInterrupt(obstacleInputPin), obstacleInterrupt, CHANGE);
 
@@ -97,46 +97,36 @@ void setup()
 
 void loop()
 {
-  // if(!stopRunning){
-  if (bounceTime > 4000000000)
-  {
-    bounceTime = 0;
-  }
-  //   delay(50);
+  Serial.print("X value: ");
+  Serial.print(analogRead(joystickXPin));
+  
+  Serial.print(" Y value: ");
+  Serial.println(analogRead(joystickYPin));
 
-  if (manualMode)
-  {
-    //     Serial.println("Manual Mode");
-    manualMovement();
-  }
-  else
-  {
-      Serial.println("Automated Mode");
-      automatedMovement();
-  }
+  delay(100);
   //   }
   // }
 }
 
-void switchInterrupt()
-{
-  if (millis() > bounceTime)
-  {
-    int switchState = digitalRead(switchPin);
+// void switchInterrupt()
+// {
+//   if (millis() > bounceTime)
+//   {
+//     int switchState = digitalRead(switchPin);
 
-    manualMode = (switchState == HIGH);
+//     manualMode = (switchState == HIGH);
 
-    if (manualMode)
-    {
-      Serial.println("Switched to Manual Mode");
-    }
-    else
-    {
-      Serial.println("Switched to Automated Mode");
-    }
-    bounceTime = millis() + bounceDuration;
-  }
-}
+//     if (manualMode)
+//     {
+//       Serial.println("Switched to Manual Mode");
+//     }
+//     else
+//     {
+//       Serial.println("Switched to Automated Mode");
+//     }
+//     bounceTime = millis() + bounceDuration;
+//   }
+// }
 
 // void alertInterrupt(){
 // if(millis() > bounceTime)
@@ -175,7 +165,7 @@ unsigned long int i = 0;
 unsigned long int j = 0;
 unsigned long int k = 0;
 
-void automatedMovement() {
+// void automatedMovement() {
   //     for(int i = 0; i < 8; i++) {
   //       ldrArrayValues[i] = analogRead(ldrArray[i]);
   //     }
@@ -221,98 +211,98 @@ void automatedMovement() {
   //       followTheLine();
   //     }
   //   
-}
+// }
 
-void manualMovement()
-{
-  // while(1){
-  int joystickXValue = analogRead(joystickXPin);
-  int joystickYValue = analogRead(joystickYPin);
+// void manualMovement()
+// {
+//   // while(1){
+//   int joystickXValue = analogRead(joystickXPin);
+//   int joystickYValue = analogRead(joystickYPin);
 
-  int motorSpeedX, motorSpeedY;
+//   int motorSpeedX, motorSpeedY;
 
-  if (joystickXValue > 1700 && joystickXValue < 1900 && joystickYValue > 1700 && joystickYValue < 1900)
-  {
-    MOTOR1_Move(0, HIGH, HIGH);
-    MOTOR2_Move(0, HIGH, HIGH);
-    Serial.println("Stop");
-    return;
-  }
+//   if (joystickXValue > 1700 && joystickXValue < 1900 && joystickYValue > 1700 && joystickYValue < 1900)
+//   {
+//     MOTOR1_Move(0, HIGH, HIGH);
+//     MOTOR2_Move(0, HIGH, HIGH);
+//     Serial.println("Stop");
+//     return;
+//   }
 
-  if (joystickXValue > 1800 && joystickXValue <= 4100 && joystickYValue <= 4100 && joystickYValue > 1850)
-  {
-    // 2
-    Serial.println("2");
-    motorSpeedX = map(joystickXValue, 4100, 1800, 250, 50);
-    motorSpeedY = map(joystickYValue, 4100, 1800, 250, 50);
-    Serial.print("Pwm M1: ");
-    Serial.print(motorSpeedY - motorSpeedX);
-    Serial.print("IN M1: HIGH LOW");
-    Serial.print("  Pwm M2: ");
-    Serial.print(motorSpeedY);
-    Serial.print("IN M2: LOW HIGH");
-    MOTOR1_Move((motorSpeedY - motorSpeedX), HIGH, LOW);
-    MOTOR2_Move(motorSpeedY, LOW, HIGH);
-    Serial.print(" Motor 1 Mode");
-    Serial.print(" High Low");
+//   if (joystickXValue > 1800 && joystickXValue <= 4100 && joystickYValue <= 4100 && joystickYValue > 1850)
+//   {
+//     // 2
+//     Serial.println("2");
+//     motorSpeedX = map(joystickXValue, 4100, 1800, 250, 50);
+//     motorSpeedY = map(joystickYValue, 4100, 1800, 250, 50);
+//     Serial.print("Pwm M1: ");
+//     Serial.print(motorSpeedY - motorSpeedX);
+//     Serial.print("IN M1: HIGH LOW");
+//     Serial.print("  Pwm M2: ");
+//     Serial.print(motorSpeedY);
+//     Serial.print("IN M2: LOW HIGH");
+//     MOTOR1_Move((motorSpeedY - motorSpeedX), HIGH, LOW);
+//     MOTOR2_Move(motorSpeedY, LOW, HIGH);
+//     Serial.print(" Motor 1 Mode");
+//     Serial.print(" High Low");
 
-    Serial.print(" Motor 2 Mode");
-    Serial.print(" Low High");
-  }
-  else if (joystickXValue > 1800 && joystickXValue <= 4100 && joystickYValue >= 0 && joystickYValue <= 1750)
-  {
-    // 3
-    Serial.println("3");
+//     Serial.print(" Motor 2 Mode");
+//     Serial.print(" Low High");
+//   }
+//   else if (joystickXValue > 1800 && joystickXValue <= 4100 && joystickYValue >= 0 && joystickYValue <= 1750)
+//   {
+//     // 3
+//     Serial.println("3");
 
-    motorSpeedX = map(joystickXValue, 4100, 1800, 250, 50);
-    motorSpeedY = map(joystickYValue, 0, 1800, 250, 50);
-    MOTOR1_Move(motorSpeedY, LOW, HIGH);
-    MOTOR2_Move(motorSpeedY, HIGH, LOW);
+//     motorSpeedX = map(joystickXValue, 4100, 1800, 250, 50);
+//     motorSpeedY = map(joystickYValue, 0, 1800, 250, 50);
+//     MOTOR1_Move(motorSpeedY, LOW, HIGH);
+//     MOTOR2_Move(motorSpeedY, HIGH, LOW);
 
-    Serial.print(" Motor 1 Mode");
-    Serial.print(" Low High");
+//     Serial.print(" Motor 1 Mode");
+//     Serial.print(" Low High");
 
-    Serial.print(" Motor 2 Mode");
-    Serial.print(" High Low");
-  }
-  else if (joystickXValue >= 0 && joystickXValue <= 1800 && joystickYValue <= 4100 && joystickYValue > 1850)
-  {
-    // 1
-    Serial.println("1");
+//     Serial.print(" Motor 2 Mode");
+//     Serial.print(" High Low");
+//   }
+//   else if (joystickXValue >= 0 && joystickXValue <= 1800 && joystickYValue <= 4100 && joystickYValue > 1850)
+//   {
+//     // 1
+//     Serial.println("1");
 
-    motorSpeedX = map(joystickXValue, 0, 1800, 250, 50);
-    motorSpeedY = map(joystickYValue, 4100, 1800, 250, 50);
-    MOTOR1_Move(motorSpeedY, HIGH, LOW);
-    MOTOR2_Move((motorSpeedY - motorSpeedX), LOW, HIGH);
+//     motorSpeedX = map(joystickXValue, 0, 1800, 250, 50);
+//     motorSpeedY = map(joystickYValue, 4100, 1800, 250, 50);
+//     MOTOR1_Move(motorSpeedY, HIGH, LOW);
+//     MOTOR2_Move((motorSpeedY - motorSpeedX), LOW, HIGH);
 
-    Serial.print(" Motor 1 Mode");
-    Serial.print(" High Low");
+//     Serial.print(" Motor 1 Mode");
+//     Serial.print(" High Low");
 
-    Serial.print(" Motor 2 Mode");
-    Serial.print(" Low High");
-  }
-  else if (joystickXValue >= 0 && joystickXValue <= 1800 && joystickYValue >= 0 && joystickYValue <= 1750)
-  {
-    // 4
-    Serial.println("4");
+//     Serial.print(" Motor 2 Mode");
+//     Serial.print(" Low High");
+//   }
+//   else if (joystickXValue >= 0 && joystickXValue <= 1800 && joystickYValue >= 0 && joystickYValue <= 1750)
+//   {
+//     // 4
+//     Serial.println("4");
 
-    motorSpeedX = map(joystickXValue, 0, 1800, 250, 50);
-    motorSpeedY = map(joystickYValue, 0, 1800, 250, 50);
-    MOTOR1_Move((motorSpeedY - motorSpeedX), LOW, HIGH);
-    MOTOR2_Move(motorSpeedY, HIGH, LOW);
+//     motorSpeedX = map(joystickXValue, 0, 1800, 250, 50);
+//     motorSpeedY = map(joystickYValue, 0, 1800, 250, 50);
+//     MOTOR1_Move((motorSpeedY - motorSpeedX), LOW, HIGH);
+//     MOTOR2_Move(motorSpeedY, HIGH, LOW);
 
-    Serial.print(" Motor 1 Mode");
-    Serial.print(" Low High");
+//     Serial.print(" Motor 1 Mode");
+//     Serial.print(" Low High");
 
-    Serial.print(" Motor 2 Mode");
-    Serial.print(" High Low");
-  }
+//     Serial.print(" Motor 2 Mode");
+//     Serial.print(" High Low");
+//   }
 
-  Serial.print(" Motor X: ");
-  Serial.print(motorSpeedX);
-  Serial.print(", Motor Y: ");
-  Serial.println(motorSpeedY);
-}
+//   Serial.print(" Motor X: ");
+//   Serial.print(motorSpeedX);
+//   Serial.print(", Motor Y: ");
+//   Serial.println(motorSpeedY);
+// }
 // }
 
 // void followTheLine(){
