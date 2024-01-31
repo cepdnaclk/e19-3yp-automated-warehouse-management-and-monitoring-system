@@ -2,8 +2,8 @@
  
 #define SECRET
  
-const char WIFI_SSID[] = "Desktop";             
-const char WIFI_PASSWORD[] = "test12345";           
+const char WIFI_SSID[] = "A30s";             
+const char WIFI_PASSWORD[] = "dasun472";           
  
 #define THINGNAME "palletJack1"
 int8_t TIME_ZONE = -5; //NYC(USA): -5 UTC
