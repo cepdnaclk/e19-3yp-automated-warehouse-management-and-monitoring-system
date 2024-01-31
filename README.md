@@ -172,9 +172,12 @@ Software testing using Postman
 
 
 
-## Conclusion
+## Final Product
+<p align ="center">
+     <img src="docs/asserts/images/end.png" width=1000  />
+</p><br>
 
-What was achieved, future developments, commercialization plans
+
 
 ## Links
 
